@@ -1,0 +1,20 @@
+/* tables */
+#content table.tablesorter {
+ border: 1px solid #999;
+
+}
+#content table.tablesorter thead tr .header {
+	background-image: url(bg.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+#content table.tablesorter tbody tr.odd td {
+	background-color:#F0F0F6;
+}
+#content table.tablesorter thead tr .headerSortUp {
+	background-image: url(asc.gif);
+}
+#content table.tablesorter thead tr .headerSortDown {
+	background-image: url(desc.gif);
+}

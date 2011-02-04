@@ -1,0 +1,134 @@
+RunNumber,DataCategory,Date,TriggerNumbers,TriggerRates/Hz,RunType,TriggerType,LTBthrd:Nhit >,LTBthrd:Esum,LTBthrd:LowEsum,LTBthrd:HighEsum,PeriodFreq/ Hz,FEEthrd,FEEMaxHitPerCh,PMTHV,ACULEDfrequency/Hz,ACULED:NAME,LEDdriveVoltage/V,position/m,2ndLEDName,DoublePulseInterval/us,2ndLEDdriveVoltage/V,position/m,Comments,Description
+6872,pedestal,2011-Jan-22,~,1000,pedestal,period,~,~,~,~,1000,0,5,2.00E+07,~,~,~,~,~,~,~,~,~,~
+6873,trigger scan: Nhit,2011-Jan-22,~,480,physics,Nhit,40,~,~,~,~,750,5,2.00E+07,~,~,~,~,~,~,~,~,~,
+6874,trigger scan: Nhit,2011-Jan-22,~,360,physics,Nhit,40,~,~,~,~,750,5,2.00E+07,~,~,~,~,~,~,~,~,~,
+6875,trigger scan: Nhit,2011-Jan-22,~,282,physics,Nhit,40,~,~,~,~,750,5,2.00E+07,~,~,~,~,~,~,~,~,~,
+6876,trigger scan: Nhit,2011-Jan-22,~,200,physics,Nhit,40,~,~,~,~,750,5,2.00E+07,~,~,~,~,~,~,~,~,~,
+6877,trigger scan: Nhit,2011-Jan-22,~,125,physics,Nhit,40,~,~,~,~,750,5,2.00E+07,~,~,~,~,~,~,~,~,~,
+6878,trigger scan: totalESum,2011-Jan-22,~,510,physics,totalESum,~,40,~,~,~,750,5,2.00E+07,~,~,~,~,~,~,~,~,~,
+6879,trigger scan: totalESum,2011-Jan-22,~,190,physics,totalESum,~,60,~,~,~,750,5,2.00E+07,~,~,~,~,~,~,~,~,~,
+6880,Cross trigger in test,2011-Jan-22,~,0,physics,crossIn,~,~,~,~,~,750,5,2.00E+07,500,MO bottom,-5,~,~,~,~,~,"actually, the LED is MO top because of the wrong cable connection  around the AD on aluminium driver box; there are no cross trigger in because the TTL to NIM inverter and attenuator has too large attenuation to the TTL pulse which introduce no trigger into LTB",
+6881,Cross trigger in test,2011-Jan-22,~,500,physics,crossIn,~,~,~,~,~,750,5,2.00E+07,500,MO bottom,-5,~,~,~,~,~,"actually, the LED is MO top because of the wrong cable connection  around the AD on aluminium driver box; remove the attenuator of the level inverter ",
+6882,Cross trigger in test,2011-Jan-22,~,500,physics,crossIn,~,~,~,~,~,750,5,2.00E+07,500,MO bottom,-4.5,~,~,~,~,~,"actually, the LED is MO top because of the wrong cable connection  around the AD on aluminium driver box; remove the attenuator of the level inverter ",
+6883,Cross trigger in test,2011-Jan-22,~,500,physics,crossIn,~,~,~,~,~,750,5,2.00E+07,500,MO bottom,-4,~,~,~,~,~,"actually, the LED is MO top because of the wrong cable connection  around the AD on aluminium driver box; remove the attenuator of the level inverter ",
+6884,Cross trigger in test,2011-Jan-22,~,500,physics,crossIn,~,~,~,~,~,750,5,2.00E+07,500,MO middle,-4,~,~,~,~,~,,
+6885,Cross trigger in test,2011-Jan-22,~,500,physics,crossIn,~,~,~,~,~,750,5,2.00E+07,500,MO middle,-4.5,~,~,~,~,~,,
+6886,Cross trigger in test,2011-Jan-22,~,200,physics,crossIn,~,~,~,~,~,750,5,2.00E+07,200,MO middle,-4.5,~,~,~,~,~,,
+6887,combined trigger mode test,2011-Jan-22,~,1000,physics,crossIn +Nhit + totalESum,40,40,~,~,100,750,5,2.00E+07,200,MO middle,-4.5,~,~,~,~,~,~1.88kB/event with FADC,
+6888,combined trigger mode test without FADC,2011-Jan-22,~,1180,physics,crossIn +Nhit + totalESum,40,40,~,~,100,750,5,2.00E+07,200,MO middle,-4.5,~,~,~,~,~,~0.6kB/event without FADC,
+,,,,,,,,,,,,,,,,,,,,,,,,
+6889,pedestal,2011-Jan-24,~,1000,pedestal,period,~,~,~,~,1000,0,5,2.00E+07,~,~,~,~,~,~,~,~,~,~
+6890,dark detector,2011-Jan-24,~,816,physics,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,~,~,~,~,~,~,~,~,without FADC,
+6891,LED test,2011-Jan-24,~,100,Adcalib,crossIn,~,~,~,~,100,750,5,2.00E+07,~,~,~,~,~,~,~,~,without FADC,
+6892,MO bottom LED intensity scan: LED not flashing,2011-Jan-24,2min,1330,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO bottom,-4.1,~,~,~,~,~,without FADC,LED not flashing
+6893,MO bottom LED intensity scan: LED not flashing,2011-Jan-24,2min,1340,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO bottom,-4.2,~,~,~,~,~,without FADC,LED not flashing
+6894,MO bottom LED intensity scan: LED not flashing,2011-Jan-24,2min,1350,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO bottom,-4.3,~,~,~,~,~,without FADC,LED not flashing
+6895,MO bottom LED intensity scan: LED not flashing,2011-Jan-24,2min,1370,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO bottom,-4.4,~,~,~,~,~,without FADC,LED not flashing
+6896,MO bottom LED intensity scan: LED not flashing,2011-Jan-24,2min,1380,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO bottom,-4.5,~,~,~,~,~,without FADC,LED not flashing
+6897,MO bottom LED intensity scan: LED not flashing,2011-Jan-24,1min,1390,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO bottom,-4.7,~,~,~,~,~,without FADC,LED not flashing
+6898,MO bottom LED intensity scan: LED not flashing,2011-Jan-24,1min,1430,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO bottom,-4.8,~,~,~,~,~,without FADC,LED not flashing
+6899,MO bottom LED intensity scan: LED not flashing,2011-Jan-24,1min,1560,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO bottom,-4.9,~,~,~,~,~,without FADC,LED not flashing
+6900,MO bottom LED intensity scan: LED not flashing,2011-Jan-24,1min,1480,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO bottom,-5,~,~,~,~,~,without FADC,LED not flashing
+6901,MO bottom LED intensity scan: LED not flashing,2011-Jan-24,30s,1470,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO bottom,-5.1,~,~,~,~,~,without FADC,LED not flashing
+6902,MO bottom LED intensity scan: LED not flashing,2011-Jan-24,30s,1500,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO bottom,-5.2,~,~,~,~,~,without FADC,LED not flashing
+6903,MO bottom LED intensity scan: LED not flashing,2011-Jan-24,30s,1470,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO bottom,-5.3,~,~,~,~,~,without FADC,LED not flashing
+6904,MO bottom LED intensity scan: LED not flashing,2011-Jan-24,30s,1520,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO bottom,-5.4,~,~,~,~,~,without FADC,LED not flashing
+6905,MO bottom LED intensity scan: LED not flashing,2011-Jan-24,30s,1480,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO bottom,-5.5,~,~,~,~,~,without FADC,LED not flashing
+6906,MO bottom LED intensity scan: LED not flashing,2011-Jan-24,30s,1460,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO bottom,-5.6,~,~,~,~,~,without FADC,LED not flashing
+6907,MO bottom LED intensity scan: LED not flashing,2011-Jan-24,30s,1440,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO bottom,-5.8,~,~,~,~,~,without FADC,LED not flashing
+6908,MO bottom LED intensity scan: LED not flashing,2011-Jan-24,30s,1420,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO bottom,-6,~,~,~,~,~,without FADC,LED not flashing
+6909,MO bottom LED intensity scan: LED not flashing,2011-Jan-24,30s,1425,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO bottom,-6.2,~,~,~,~,~,without FADC,LED not flashing
+6910,MO bottom LED intensity scan: LED not flashing,2011-Jan-24,30s,1440,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO bottom,-6.4,~,~,~,~,~,without FADC,LED not flashing
+6911,MO bottom LED intensity scan: LED not flashing,2011-Jan-24,30s,1405,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO bottom,-6.6,~,~,~,~,~,without FADC,LED not flashing
+6912,MO bottom LED intensity scan: LED not flashing,2011-Jan-24,30s,1400,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO bottom,-6.8,~,~,~,~,~,without FADC,LED not flashing
+6913,MO bottom LED intensity scan: LED not flashing,2011-Jan-24,30s,1430,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO bottom,-7,~,~,~,~,~,without FADC,LED not flashing
+6914,MO bottom LED intensity scan: LED not flashing,2011-Jan-24,30s,1397,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO bottom,-7.2,~,~,~,~,~,without FADC,LED not flashing
+6915,MO bottom LED intensity scan: LED not flashing,2011-Jan-24,30s,1390,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO bottom,-7.5,~,~,~,~,~,without FADC,LED not flashing
+6916,MO bottom LED intensity scan: LED not flashing,2011-Jan-24,30s,1382,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO bottom,-7.8,~,~,~,~,~,without FADC,LED not flashing
+6917,MO bottom LED intensity scan: LED not flashing,2011-Jan-24,30s,1410,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO bottom,-8,~,~,~,~,~,without FADC,LED not flashing
+6918,MO mid LED intensity scan: LED not flashing,2011-Jan-24,2min,1260,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO mid,-4.1,~,~,~,~,~,without FADC,LED not flashing
+6919,MO mid LED intensity scan: LED not flashing,2011-Jan-24,2min,1260,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO mid,-4.2,~,~,~,~,~,without FADC,LED not flashing
+6920,MO mid LED intensity scan: LED not flashing,2011-Jan-24,2min,1260,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO mid,-4.3,~,~,~,~,~,without FADC,LED not flashing
+6921,MO mid LED intensity scan: LED not flashing,2011-Jan-24,2min,1260,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO mid,-4.4,~,~,~,~,~,without FADC,LED not flashing
+6922,MO mid LED intensity scan: LED not flashing,2011-Jan-24,2min,1260,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO mid,-4.5,~,~,~,~,~,without FADC,LED not flashing
+6923,MO mid LED intensity scan: LED not flashing,2011-Jan-24,1min,1260,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO mid,-4.7,~,~,~,~,~,without FADC,LED not flashing
+6924,MO mid LED intensity scan: LED not flashing,2011-Jan-24,1min,1260,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO mid,-4.7,~,~,~,~,~,without FADC,LED not flashing
+6925,MO mid LED intensity scan: LED not flashing,2011-Jan-24,1min,1260,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO mid,-4.8,~,~,~,~,~,without FADC,LED not flashing
+6926,MO mid LED intensity scan: LED not flashing,2011-Jan-24,1min,1260,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO mid,-4.9,~,~,~,~,~,without FADC,LED not flashing
+6927,MO mid LED intensity scan: LED not flashing,2011-Jan-24,1min,1260,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO mid,-5,~,~,~,~,~,without FADC,LED not flashing
+6928,MO mid LED intensity scan: LED not flashing,2011-Jan-24,30s,1260,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO mid,-5.1,~,~,~,~,~,without FADC,LED not flashing
+6929,MO mid LED intensity scan: LED not flashing,2011-Jan-24,30s,1260,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO mid,-5.2,~,~,~,~,~,without FADC,LED not flashing
+6930,MO mid LED intensity scan: LED not flashing,2011-Jan-24,30s,1260,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO mid,-5.3,~,~,~,~,~,without FADC,LED not flashing
+6931,MO mid LED intensity scan: LED not flashing,2011-Jan-24,30s,1260,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO mid,-5.4,~,~,~,~,~,without FADC,LED not flashing
+6932,MO mid LED intensity scan: LED not flashing,2011-Jan-24,30s,1260,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO mid,-5.5,~,~,~,~,~,without FADC,LED not flashing
+6933,MO mid LED intensity scan: LED not flashing,2011-Jan-24,30s,1260,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO mid,-5.6,~,~,~,~,~,without FADC,LED not flashing
+6934,MO mid LED intensity scan: LED not flashing,2011-Jan-24,30s,1260,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO mid,-5.8,~,~,~,~,~,without FADC,LED not flashing
+6935,MO mid LED intensity scan: LED not flashing,2011-Jan-24,30s,1260,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO mid,-6,~,~,~,~,~,without FADC,LED not flashing
+6936,MO mid LED intensity scan: LED not flashing,2011-Jan-24,30s,1260,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO mid,-6.2,~,~,~,~,~,without FADC,LED not flashing
+6937,MO mid LED intensity scan: LED not flashing,2011-Jan-24,30s,1260,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO mid,-6.4,~,~,~,~,~,without FADC,LED not flashing
+6938,MO mid LED intensity scan: LED not flashing,2011-Jan-24,30s,1260,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO mid,-6.6,~,~,~,~,~,without FADC,LED not flashing
+6939,MO mid LED intensity scan: LED not flashing,2011-Jan-24,30s,1320,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO mid,-6.8,~,~,~,~,~,without FADC,LED not flashing
+6940,MO mid LED intensity scan: LED not flashing,2011-Jan-24,30s,1340,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO mid,-7,~,~,~,~,~,without FADC,LED not flashing
+6941,MO mid LED intensity scan: LED not flashing,2011-Jan-24,30s,1360,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO mid,-7.2,~,~,~,~,~,without FADC,LED not flashing
+6942,MO mid LED intensity scan: LED not flashing,2011-Jan-24,30s,1380,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO mid,-7.5,~,~,~,~,~,without FADC,LED not flashing
+6943,MO mid LED intensity scan: LED not flashing,2011-Jan-24,30s,1400,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO mid,-7.8,~,~,~,~,~,without FADC,LED not flashing
+6944,MO mid LED intensity scan: LED not flashing,2011-Jan-24,30s,1410,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO mid,-8,~,~,~,~,~,without FADC,LED not flashing
+6945,"dark AD, total Esum latency test",2011-Jan-24,,860,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,~,~,~,~,~,~,~,~,without FADC,total Esum latency:1250ns
+6946,"dark AD, total Esum latency test",2011-Jan-24,,860,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,~,~,~,~,~,~,~,~,without FADC,total Esum latency:1100ns
+6947,LED test,2011-Jan-24,,1500,physics,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,100,MO mid,-4.5,~,~,~,~,~,without FADC,
+6948,LED test,2011-Jan-24,,1560,physics,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,100,MO mid,-5,~,~,~,~,~,without FADC,
+6949,LED test,2011-Jan-24,,?,physics,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,100,MO mid,-5,~,~,~,~,~,without FADC,"decoupler(decoupler#1, channel#2) used for L3C1R2 dead, can't provide the working HV; test L3C1R2 with  decoupler #1 channel 1 (the neigbor channel) the PMT works fine; then move L3C1R2 to 2inch decoupler channel 9 (1-Ta);"
+6950,LED test,2011-Jan-24,,? ,physics,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,100,MO mid,-5,~,~,~,~,~,without FADC,"decoupler(decoupler#1, channel#2) used for L3C1R2 dead, can't provide the working HV; test L3C1R2 with  decoupler #1 channel 1 (the neigbor channel) the PMT works fine; then move L3C1R2 to 2inch decoupler channel 9 (1-Ta);"
+6951,MO mid LED intensity scan: FEE in slot 5 noise,2011-Jan-24,2min,1260,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO mid,-4.1,~,~,~,~,~,without FADC,"FEE in slot 5 shows period noise, sine ~200MHz in baseline while TDC spectrum shows 40MHz noise"
+6952,MO mid LED intensity scan: FEE in slot 5 noise,2011-Jan-24,2min,1260,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO mid,-4.2,~,~,~,~,~,without FADC,"FEE in slot 5 shows period noise, sine ~200MHz in baseline while TDC spectrum shows 40MHz noise"
+6953,MO mid LED intensity scan: FEE in slot 5 noise,2011-Jan-24,2min,1260,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO mid,-4.3,~,~,~,~,~,without FADC,"FEE in slot 5 shows period noise, sine ~200MHz in baseline while TDC spectrum shows 40MHz noise"
+6954,MO mid LED intensity scan: FEE in slot 5 noise,2011-Jan-24,2min,1260,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO mid,-4.4,~,~,~,~,~,without FADC,"FEE in slot 5 shows period noise, sine ~200MHz in baseline while TDC spectrum shows 40MHz noise"
+6955,MO mid LED intensity scan: FEE in slot 5 noise,2011-Jan-24,2min,1260,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO mid,-4.5,~,~,~,~,~,without FADC,"FEE in slot 5 shows period noise, sine ~200MHz in baseline while TDC spectrum shows 40MHz noise"
+6956,MO mid LED intensity scan: FEE in slot 5 noise,2011-Jan-24,1min,1260,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO mid,-4.7,~,~,~,~,~,without FADC,"FEE in slot 5 shows period noise, sine ~200MHz in baseline while TDC spectrum shows 40MHz noise"
+6957,MO mid LED intensity scan: FEE in slot 5 noise,2011-Jan-24,1min,1260,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO mid,-4.7,~,~,~,~,~,without FADC,"FEE in slot 5 shows period noise, sine ~200MHz in baseline while TDC spectrum shows 40MHz noise"
+6958,MO mid LED intensity scan: FEE in slot 5 noise,2011-Jan-24,1min,1260,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO mid,-4.8,~,~,~,~,~,without FADC,"FEE in slot 5 shows period noise, sine ~200MHz in baseline while TDC spectrum shows 40MHz noise"
+6959,MO mid LED intensity scan: FEE in slot 5 noise,2011-Jan-24,1min,1260,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO mid,-4.9,~,~,~,~,~,without FADC,"FEE in slot 5 shows period noise, sine ~200MHz in baseline while TDC spectrum shows 40MHz noise"
+6960,MO mid LED intensity scan: FEE in slot 5 noise,2011-Jan-24,1min,1260,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO mid,-5,~,~,~,~,~,without FADC,"FEE in slot 5 shows period noise, sine ~200MHz in baseline while TDC spectrum shows 40MHz noise"
+6961,MO mid LED intensity scan: FEE in slot 5 noise,2011-Jan-24,30s,1260,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO mid,-5.1,~,~,~,~,~,without FADC,"FEE in slot 5 shows period noise, sine ~200MHz in baseline while TDC spectrum shows 40MHz noise"
+6962,"MO mid LED intensity scan: DAQ error, test",2011-Jan-24,2min,?,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO mid,-4.1,~,~,~,~,~,without FADC,DAQ error because of forced stop
+6963,"MO mid LED intensity scan: DAQ error, test",2011-Jan-24,2min,?,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO mid,-4.2,~,~,~,~,~,without FADC,DAQ error because of forced stop
+6964,"MO mid LED intensity scan: DAQ error, test",2011-Jan-24,2min,?,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,500,MO mid,-4.3,~,~,~,~,~,without FADC,DAQ error because of forced stop
+6965,MO mid LED intensity scan,2011-Jan-24,2min,500,ADCalib,crossIn,~,~,~,~,100,750,5,2.00E+07,500,MO mid,-4.1,~,~,~,~,~,without FADC,
+6966,MO mid LED intensity scan,2011-Jan-24,2min,500,ADCalib,crossIn,~,~,~,~,100,750,5,2.00E+07,500,MO mid,-4.2,~,~,~,~,~,without FADC,
+6967,MO mid LED intensity scan,2011-Jan-24,2min,500,ADCalib,crossIn,~,~,~,~,100,750,5,2.00E+07,500,MO mid,-4.3,~,~,~,~,~,without FADC,
+6968,MO mid LED intensity scan,2011-Jan-24,2min,500,ADCalib,crossIn,~,~,~,~,100,750,5,2.00E+07,500,MO mid,-4.4,~,~,~,~,~,without FADC,
+6969,MO mid LED intensity scan,2011-Jan-24,2min,500,ADCalib,crossIn,~,~,~,~,100,750,5,2.00E+07,500,MO mid,-4.5,~,~,~,~,~,without FADC,
+6970,MO mid LED intensity scan,2011-Jan-24,1min,500,ADCalib,crossIn,~,~,~,~,100,750,5,2.00E+07,500,MO mid,-4.7,~,~,~,~,~,without FADC,
+6971,MO mid LED intensity scan,2011-Jan-24,1min,500,ADCalib,crossIn,~,~,~,~,100,750,5,2.00E+07,500,MO mid,-4.7,~,~,~,~,~,without FADC,
+6972,MO mid LED intensity scan,2011-Jan-24,1min,500,ADCalib,crossIn,~,~,~,~,100,750,5,2.00E+07,500,MO mid,-4.8,~,~,~,~,~,without FADC,
+6973,MO mid LED intensity scan,2011-Jan-24,1min,500,ADCalib,crossIn,~,~,~,~,100,750,5,2.00E+07,500,MO mid,-4.9,~,~,~,~,~,without FADC,
+6974,MO mid LED intensity scan,2011-Jan-24,1min,500,ADCalib,crossIn,~,~,~,~,100,750,5,2.00E+07,500,MO mid,-5,~,~,~,~,~,without FADC,
+6975,MO mid LED intensity scan,2011-Jan-24,30s,500,ADCalib,crossIn,~,~,~,~,100,750,5,2.00E+07,500,MO mid,-5.1,~,~,~,~,~,without FADC,
+6976,MO mid LED intensity scan,2011-Jan-24,30s,500,ADCalib,crossIn,~,~,~,~,100,750,5,2.00E+07,500,MO mid,-5.2,~,~,~,~,~,without FADC,
+6977,MO mid LED intensity scan,2011-Jan-24,30s,500,ADCalib,crossIn,~,~,~,~,100,750,5,2.00E+07,500,MO mid,-5.3,~,~,~,~,~,without FADC,
+6978,MO mid LED intensity scan,2011-Jan-24,30s,500,ADCalib,crossIn,~,~,~,~,100,750,5,2.00E+07,500,MO mid,-5.4,~,~,~,~,~,without FADC,
+6979,MO mid LED intensity scan,2011-Jan-24,30s,500,ADCalib,crossIn,~,~,~,~,100,750,5,2.00E+07,500,MO mid,-5.5,~,~,~,~,~,without FADC,
+6980,MO mid LED intensity scan,2011-Jan-24,30s,500,ADCalib,crossIn,~,~,~,~,100,750,5,2.00E+07,500,MO mid,-5.6,~,~,~,~,~,without FADC,
+6981,MO mid LED intensity scan,2011-Jan-24,30s,500,ADCalib,crossIn,~,~,~,~,100,750,5,2.00E+07,500,MO mid,-5.8,~,~,~,~,~,without FADC,
+6982,MO mid LED intensity scan,2011-Jan-24,30s,500,ADCalib,crossIn,~,~,~,~,100,750,5,2.00E+07,500,MO mid,-6,~,~,~,~,~,without FADC,
+6983,MO mid LED intensity scan,2011-Jan-24,30s,500,ADCalib,crossIn,~,~,~,~,100,750,5,2.00E+07,500,MO mid,-6.2,~,~,~,~,~,without FADC,
+6984,MO mid LED intensity scan,2011-Jan-24,30s,500,ADCalib,crossIn,~,~,~,~,100,750,5,2.00E+07,500,MO mid,-6.4,~,~,~,~,~,without FADC,
+6985,MO mid LED intensity scan,2011-Jan-24,30s,500,ADCalib,crossIn,~,~,~,~,100,750,5,2.00E+07,500,MO mid,-6.6,~,~,~,~,~,without FADC,
+6986,MO mid LED intensity scan,2011-Jan-24,30s,500,ADCalib,crossIn,~,~,~,~,100,750,5,2.00E+07,500,MO mid,-6.8,~,~,~,~,~,without FADC,
+6987,MO mid LED intensity scan,2011-Jan-24,30s,500,ADCalib,crossIn,~,~,~,~,100,750,5,2.00E+07,500,MO mid,-7,~,~,~,~,~,without FADC,
+6988,MO mid LED intensity scan,2011-Jan-24,30s,500,ADCalib,crossIn,~,~,~,~,100,750,5,2.00E+07,500,MO mid,-7.2,~,~,~,~,~,without FADC,
+6989,MO mid LED intensity scan,2011-Jan-24,30s,500,ADCalib,crossIn,~,~,~,~,100,750,5,2.00E+07,500,MO mid,-7.5,~,~,~,~,~,without FADC,
+6990,MO mid LED intensity scan,2011-Jan-24,30s,500,ADCalib,crossIn,~,~,~,~,100,750,5,2.00E+07,500,MO mid,-7.8,~,~,~,~,~,without FADC,
+6991,MO mid LED intensity scan,2011-Jan-24,,500,ADCalib,crossIn,~,~,~,~,100,750,5,2.00E+07,500,MO mid,-8,~,~,~,~,~,without FADC,
+6992,test with LED,2011-Jan-24,,940,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,100,MO mid,-4.5,~,~,~,~,~,without FADC,
+6993,test with LED: disconnect crossIn cable from ACU,2011-Jan-24,,940,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,100,MO mid,-4.5,~,~,~,~,~,without FADC,
+6994,test with LED,2011-Jan-24,,930,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,100,MO mid,-4.4,~,~,~,~,~,without FADC,
+6995,test with LED,2011-Jan-24,,930,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,100,MO mid,-4.3,~,~,~,~,~,without FADC,
+6996,test with LED,2011-Jan-24,,930,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,100,MO mid,-4.35,~,~,~,~,~,without FADC,
+6997,test with LED,2011-Jan-24,,930,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,100,MO mid,-4.38,~,~,~,~,~,without FADC,
+6998,long term,2011-Jan-24,,930,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,100,MO mid,-4.38,~,~,~,~,~,without FADC,
+6999,total Esum noise test,2011-Jan-24,,?,ADCalib,crossIn +Nhit + ESumADC + period,40,~,~,~,100,750,5,2.00E+07,100,MO mid,-4.38,~,~,~,~,~,without FADC,
+7000,long term,2011-Jan-24,,930,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,100,MO mid,-4.65,~,~,~,~,~,without FADC,"LED started at -4.38V, then -4.8V, finally -4.65 (see DocDB-5951, slides 15-18)"
+,,,,,,,,,,,,,,,,,,,,,,,,
+7005,long term (part II),2011-Jan-26,,930,ADCalib,crossIn +Nhit + totalESum+ period,40,40,~,~,100,750,5,2.00E+07,100,MO mid,-4.65,~,~,~,~,~,without FADC,LED at -4.65 V when flashing
+,,,,,,,,,,,,,,,,,,,,,,,,

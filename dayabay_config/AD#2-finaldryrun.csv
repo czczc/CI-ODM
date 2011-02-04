@@ -1,0 +1,42 @@
+RunNumber,DataCategory,Date,TriggerNumbers,TriggerRates/Hz,RunType,TriggerType,LTBthrd:Nhit >,LTBthrd:Esum,LTBthrd:LowEsum,LTBthrd:HighEsum,PeriodFreq/ Hz,FEEthrd,FEEMaxHitPerCh,PMTHV,ACULEDfrequency/Hz,ACULED:NAME,LEDdriveVoltage/V,position/m,2ndLEDName,DoublePulseInterval/us,2ndLEDdriveVoltage/V,position/m,Comments,Description,,
+6682,"scintillator ball Z scan, Acu A",11/11/2010,25minutes,2000,Adcalib,period,~,~,~,~,2000,750,5,2.00E+07,~,ACU A scintillator ball,~,1.9,~,~,~,~,FADC prescale to oxff,top C is turned off,,
+6683,"scintillator ball Z scan, Acu A",11/11/2010,25minutes,2000,Adcalib,period,~,~,~,~,2000,750,5,2.00E+07,~,ACU A scintillator ball,~,1.65,~,~,~,~,FADC prescale to oxff,top C is turned off,,
+6684,"scintillator ball Z scan, Acu A",11/11/2010,25minutes,2000,Adcalib,period,~,~,~,~,2000,750,5,2.00E+07,~,ACU A scintillator ball,~,1.4,~,~,~,~,FADC prescale to oxff,top C is turned off,,
+6685,"scintillator ball Z scan, Acu A",11/11/2010,25minutes,2000,Adcalib,period,~,~,~,~,2000,750,5,2.00E+07,~,ACU A scintillator ball,~,1.15,~,~,~,~,FADC prescale to oxff,top C is turned off,,
+6686,"scintillator ball Z scan, Acu A",11/11/2010,25minutes,2000,Adcalib,period,~,~,~,~,2000,750,5,2.00E+07,~,ACU A scintillator ball,~,0.9,~,~,~,~,FADC prescale to oxff,top C is turned off,,
+6687,"scintillator ball Z scan, Acu A",11/11/2010,25minutes,2000,Adcalib,period,~,~,~,~,2000,750,5,2.00E+07,~,ACU A scintillator ball,~,0.65,~,~,~,~,FADC prescale to oxff,top C is turned off,,
+6688,"scintillator ball Z scan, Acu A",11/11/2010,25minutes,2000,Adcalib,period,~,~,~,~,2000,750,5,2.00E+07,~,ACU A scintillator ball,~,0.4,~,~,~,~,FADC prescale to oxff,top C is turned off,,
+6689,"scintillator ball Z scan, Acu A",11/11/2010,25minutes,2000,Adcalib,period,~,~,~,~,2000,750,5,2.00E+07,~,ACU A scintillator ball,~,0.15,~,~,~,~,FADC prescale to oxff,top C is turned off,,
+6690,"scintillator ball Z scan, Acu A",11/11/2010,25minutes,2000,Adcalib,period,~,~,~,~,2000,750,5,2.00E+07,~,ACU A scintillator ball,~,-0.1,~,~,~,~,FADC prescale to oxff,top C is turned off,,
+6691,"scintillator ball Z scan, Acu A",11/11/2010,25minutes,2000,Adcalib,period,~,~,~,~,2000,750,5,2.00E+07,~,ACU A scintillator ball,~,-0.35,~,~,~,~,FADC prescale to oxff,top C is turned off,,
+6692,"scintillator ball Z scan, Acu A",11/11/2010,25minutes,2000,Adcalib,period,~,~,~,~,2000,750,5,2.00E+07,~,ACU A scintillator ball,~,-0.6,~,~,~,~,FADC prescale to oxff,top C is turned off,,
+6693,"scintillator ball Z scan, Acu A",11/11/2010,25minutes,2000,Adcalib,period,~,~,~,~,2000,750,5,2.00E+07,~,ACU A scintillator ball,~,-0.85,~,~,~,~,FADC prescale to oxff,top C is turned off,,
+6694,"scintillator ball Z scan, Acu A",11/11/2010,25minutes,2000,Adcalib,period,~,~,~,~,2000,750,5,2.00E+07,~,ACU A scintillator ball,~,-1.1,~,~,~,~,FADC prescale to oxff,top C is turned off,,
+6695,dark AD,11/11/2010,26minutes,2000,Physics,period,~,~,~,~,~,750,5,2.00E+07,~,~,~,~,~,~,~,~,FADC prescale to oxff,top C is turned off,walky talky is using during the data taking at some time,
+6696,system test with MO B LED ,11/11/2010,2minutes,2560,Physics,Nhit,40,~,~,~,~,750,5,2.00E+07,500,MO B,-7,~,~,~,~,~,FADC prescale recover to ox1,top C is turned off,,stop then start
+6697,system test with MO B LED ,11/11/2010,2minutes,2560,Physics,Nhit,40,~,~,~,~,750,5,2.00E+07,500,MO B,-7,~,~,~,~,~,FADC prescale recover to ox1,top C is turned off,,stop then start
+6698,system test with MO B LED ,11/11/2010,1minutes,2560,Physics,Nhit,40,~,~,~,~,750,5,2.00E+07,500,MO B,-7,~,~,~,~,~,FADC prescale recover to ox1,top C is turned off,,stop then start
+6699,system test with MO B LED ,11/11/2010,1minutes,2560,Physics,Nhit,40,~,~,~,~,750,5,2.00E+07,500,MO B,-7,~,~,~,~,~,FADC prescale recover to ox1,top C is turned off,,reconfig then start
+6700,system test with MO B LED ,11/11/2010,1minutes,2560,Physics,Nhit,40,~,~,~,~,750,5,2.00E+07,500,MO B,-7,~,~,~,~,~,FADC prescale recover to ox1,top C is turned off,,reconfig then start
+6701,system test with MO B LED ,11/11/2010,1minutes,2640,Physics,Nhit,40,~,~,~,~,750,5,2.00E+07,500,MO B,-7,~,~,~,~,~,FADC prescale recover to ox1,top C is turned off,,restart VME crate
+6702,system test with MO B LED ,11/11/2010,1minutes,2640,Physics,Nhit,40,~,~,~,~,750,5,2.00E+07,500,MO B,-7,~,~,~,~,~,FADC prescale recover to ox1,top C is turned off,,restart VME crate
+6703,system test with MO B LED ,11/11/2010,1minutes,2640,Physics,Nhit,40,~,~,~,~,750,5,2.00E+07,500,MO B,-7,~,~,~,~,~,FADC prescale recover to ox1,top C is turned off,,restart VME crate
+6704,system test with MO B LED ,11/11/2010,1minutes,1800,Physics,Nhit,40,~,~,~,~,750,5,2.00E+07,200,MO B,-8,~,~,~,~,~,FADC prescale recover to ox1,top C is turned off,,
+6705,system test with MO B LED ,11/11/2010,1minutes,1750,Physics,Nhit,40,~,~,~,~,750,5,2.00E+07,200,MO B,-9,~,~,~,~,~,FADC prescale recover to ox1,top C is turned off,,
+6706,system test with MO B LED ,11/11/2010,1minutes,1850,Physics,Nhit,40,~,~,~,~,750,5,2.00E+07,200,MO B,-9.5,~,~,~,~,~,FADC prescale recover to ox1,top C is turned off,,
+6707,system test with MO B LED ,11/11/2010,1minutes,1940,Physics,Nhit,40,~,~,~,~,750,5,2.00E+07,200,MO B,-9.9,~,~,~,~,~,FADC prescale recover to ox1,top C is turned off,,
+6708,dark AD,11/11/2010,3minutes,1290,Physics,Nhit,7,~,~,~,~,750,5,2.00E+07,~,~,~,~,~,~,~,~,FADC prescale recover to ox1,top C is turned off,,trigger forbiden time set to 500us
+6709,"scintillator ball Z scan, Acu A",11/11/2010,3minutes,1700,Adcalib,Nhit,7,~,~,~,~,750,5,2.00E+07,~,~,~,1.9,~,~,~,~,FADC prescale recover to ox1,top C is turned off,,trigger forbiden time set to 500us
+6710,"scintillator ball Z scan, Acu A",11/11/2010,3minutes,1770,Adcalib,Nhit,7,~,~,~,~,750,5,2.00E+07,~,~,~,1.65,~,~,~,~,FADC prescale recover to ox1,top C is turned off,,trigger forbiden time set to 500us
+6711,"scintillator ball Z scan, Acu A",11/11/2010,3minutes,1770,Adcalib,Nhit,7,~,~,~,~,750,5,2.00E+07,~,~,~,1.4,~,~,~,~,FADC prescale recover to ox1,top C is turned off,,trigger forbiden time set to 500us
+6712,"scintillator ball Z scan, Acu A",11/11/2010,3minutes,1770,Adcalib,Nhit,7,~,~,~,~,750,5,2.00E+07,~,~,~,1.15,~,~,~,~,FADC prescale recover to ox1,top C is turned off,,trigger forbiden time set to 500us
+6713,"scintillator ball Z scan, Acu A",11/11/2010,3minutes,1770,Adcalib,Nhit,7,~,~,~,~,750,5,2.00E+07,~,~,~,0.9,~,~,~,~,FADC prescale recover to ox1,top C is turned off,,trigger forbiden time set to 500us
+6714,"scintillator ball Z scan, Acu A",11/11/2010,3minutes,1770,Adcalib,Nhit,7,~,~,~,~,750,5,2.00E+07,~,~,~,0.65,~,~,~,~,FADC prescale recover to ox1,top C is turned off,,trigger forbiden time set to 500us
+6715,"scintillator ball Z scan, Acu A",11/11/2010,3minutes,1770,Adcalib,Nhit,7,~,~,~,~,750,5,2.00E+07,~,~,~,0.4,~,~,~,~,FADC prescale recover to ox1,top C is turned off,,trigger forbiden time set to 500us
+6716,"scintillator ball Z scan, Acu A",11/11/2010,3minutes,1770,Adcalib,Nhit,7,~,~,~,~,750,5,2.00E+07,~,~,~,0.15,~,~,~,~,FADC prescale recover to ox1,top C is turned off,,trigger forbiden time set to 500us
+6717,"scintillator ball Z scan, Acu A",11/11/2010,3minutes,1770,Adcalib,Nhit,7,~,~,~,~,750,5,2.00E+07,~,~,~,-0.1,~,~,~,~,FADC prescale recover to ox1,top C is turned off,,trigger forbiden time set to 500us
+6718,"scintillator ball Z scan, Acu A",11/11/2010,3minutes,1770,Adcalib,Nhit,7,~,~,~,~,750,5,2.00E+07,~,~,~,-0.35,~,~,~,~,FADC prescale recover to ox1,top C is turned off,,trigger forbiden time set to 500us
+6719,"scintillator ball Z scan, Acu A",11/11/2010,3minutes,1770,Adcalib,Nhit,7,~,~,~,~,750,5,2.00E+07,~,~,~,-0.6,~,~,~,~,FADC prescale recover to ox1,top C is turned off,,trigger forbiden time set to 500us
+6720,"scintillator ball Z scan, Acu A",11/11/2010,3minutes,1770,Adcalib,Nhit,7,~,~,~,~,750,5,2.00E+07,~,~,~,-0.85,~,~,~,~,FADC prescale recover to ox1,top C is turned off,,trigger forbiden time set to 500us
+6721,"scintillator ball Z scan, Acu A",11/11/2010,3minutes,1770,Adcalib,Nhit,7,~,~,~,~,750,5,2.00E+07,~,~,~,-1.1,~,~,~,~,FADC prescale recover to ox1,top C is turned off,,trigger forbiden time set to 500us
+,,,,,,,,,,,,,,,,,,,,,,,,,,
