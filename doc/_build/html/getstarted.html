@@ -1,0 +1,171 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Get Started &mdash; ODM Developer&#39;s Guide</title>
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="ODM Developer&#39;s Guide" href="index.html" />
+    <link rel="next" title="Back-end Programming" href="backend.html" />
+    <link rel="prev" title="Introduction to ODM" href="intro.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="backend.html" title="Back-end Programming"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="intro.html" title="Introduction to ODM"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">ODM Developer&#39;s Guide</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="get-started">
+<h1>Get Started<a class="headerlink" href="#get-started" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="language-prerequisite">
+<span id="index-0"></span><h2>Language Prerequisite<a class="headerlink" href="#language-prerequisite" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>PHP &amp; SQL</li>
+<li>JavaScript</li>
+<li>HTML / CSS</li>
+</ul>
+<p>You don&#8217;t need to read too deep into the languages, just enough to get you started. The best way to learn a language is by using it in your project, not by reading the book.</p>
+</div>
+<div class="section" id="framework-prerequisite">
+<span id="index-1"></span><h2>Framework Prerequisite<a class="headerlink" href="#framework-prerequisite" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>PHP Framework: <a class="reference external" href="http://codeigniter.com/">CodeIgniter</a></li>
+<li>JavaScript Framework: <a class="reference external" href="http://jquery.com/">JQuery</a></li>
+</ul>
+<p>After you have learned some basics of the languages, you can start trying out the two wonderful frameworks that are used in ODM. There are two excellent video tutorial series for beginners (
+<a class="reference external" href="http://net.tutsplus.com/sessions/codeigniter-from-scratch/">CodeIgniter From Scratch</a> | <a class="reference external" href="http://net.tutsplus.com/articles/web-roundups/jquery-for-absolute-beginners-video-series/">JQuery For Absolute Beginners</a>) that should get you started.</p>
+</div>
+<div class="section" id="setup-a-test-web-server">
+<span id="index-2"></span><h2>Setup a Test Web Server<a class="headerlink" href="#setup-a-test-web-server" title="Permalink to this headline">¶</a></h2>
+<p>You will need a test web server during development. The recommended way to setup the web server on each platform is:</p>
+<ul class="simple">
+<li>Windows: <a class="reference external" href="http://www.apachefriends.org/en/xampp-windows.html">XAMPP</a></li>
+<li>Mac: <a class="reference external" href="http://www.mamp.info/en/index.html">MAMP</a></li>
+<li>Linux: following google to setup the <strong>LAMP</strong> server</li>
+</ul>
+<p>To make sure the web server is set up correctly, write a simple php file, for example</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nb">phpinfo</span><span class="p">();</span> <span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+<p>put it to the correct document root directory, and see if it can be displayed on your web browser with the correct url.</p>
+</div>
+<div class="section" id="setup-a-code-development-environment">
+<span id="index-3"></span><h2>Setup a Code Development Environment<a class="headerlink" href="#setup-a-code-development-environment" title="Permalink to this headline">¶</a></h2>
+<p>The ODM code is hosted on the official Daya Bay svn repository. Change to your web document root directory and check out the code</p>
+<div class="highlight-sh"><div class="highlight"><pre>svn co http://dayabay.ihep.ac.cn/svn/dybsvn/groups/Web/ODM
+</pre></div>
+</div>
+<p>Try to see if you can understand the basic code structure.</p>
+<p>You will need to create a &#8221;.htaccess&#8221; file under the &#8220;ODM&#8221; directory that you just checked out with the following content:</p>
+<div class="highlight-apache"><div class="highlight"><pre><span class="nt">&lt;IfModule</span> <span class="s">mod_rewrite.c</span><span class="nt">&gt;</span>
+    <span class="nb">RewriteEngine</span> <span class="k">On</span>
+    <span class="nb">RewriteBase</span> <span class="sx">/path/to/ODM/</span>
+    <span class="nb">RewriteCond</span> %{REQUEST_FILENAME} !-f
+    <span class="nb">RewriteCond</span> %{REQUEST_FILENAME} !-d
+    <span class="nb">RewriteRule</span> ^(.*)$ index.php/$1 [L]
+<span class="nt">&lt;/IfModule&gt;</span>
+
+<span class="nt">&lt;IfModule</span> <span class="s">!mod_rewrite.c</span><span class="nt">&gt;</span>
+    <span class="nb">ErrorDocument</span> <span class="m">404</span> <span class="sx">/index.php</span>
+<span class="nt">&lt;/IfModule&gt;</span>
+</pre></div>
+</div>
+<p>Replace &#8220;/path/to/ODM/&#8221; with the correct relative url of your test ODM site. Does the ODM site show up in your web browser?</p>
+<p>You will need a good Code Editor or IDE for the developing. While <em>vi</em> or <em>emacs</em> has been the long time favorite by the programmers, web developers tend to use something more &#8216;modern&#8217;.
+<a class="reference external" href="http://www.aptana.com/products/studio2">Aptana</a> is a good free IDE that is available on all platforms. If you are using a mac, then <a class="reference external" href="http://macromates.com/">TextMate</a> is highly recommended even though it&#8217;s not free.</p>
+<p>Congratulations! Now you are ready for the actual coding. The fun part begins.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Get Started</a><ul>
+<li><a class="reference internal" href="#language-prerequisite">Language Prerequisite</a></li>
+<li><a class="reference internal" href="#framework-prerequisite">Framework Prerequisite</a></li>
+<li><a class="reference internal" href="#setup-a-test-web-server">Setup a Test Web Server</a></li>
+<li><a class="reference internal" href="#setup-a-code-development-environment">Setup a Code Development Environment</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="intro.html"
+                        title="previous chapter">Introduction to ODM</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="backend.html"
+                        title="next chapter">Back-end Programming</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="backend.html" title="Back-end Programming"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="intro.html" title="Introduction to ODM"
+             >previous</a> |</li>
+        <li><a href="index.html">ODM Developer&#39;s Guide</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+    </div>
+  </body>
+</html>

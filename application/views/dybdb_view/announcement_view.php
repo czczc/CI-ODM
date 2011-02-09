@@ -5,6 +5,25 @@
 <div id="content">
     <div class = "subject">
         <h2>
+            Development and Code Management
+            <div class="inline_right">02/04/2011</div>
+        </h2>
+        <div class="annoucement">
+            <ul>
+                <li>
+                    The source code of the ODM site is moved to DYBSVNROOT://groups/Web/ODM/
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    I am starting to fill in the <?php echo anchor('doc/html', 'ODM Documentation'); ?>.
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class = "subject">
+        <h2>
             Updates
             <div class="inline_right">01/22/2011</div>
         </h2>

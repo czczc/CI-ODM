@@ -62,6 +62,7 @@
             <ul class="sub_menu">
                 <li><?php echo anchor('dybdb/announcement', 'Announcement'); ?></li>
                 <li><?php echo anchor('dybdb/benchmark', 'Benchmark'); ?></li>
+                <li><?php echo anchor('doc/html', 'Documentation'); ?></li>
                 <li class="menu_separator"></li>
                 <li><?php echo anchor('dybdb/logout', 'Logout'); ?></li>
             </ul>
