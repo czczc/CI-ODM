@@ -69,13 +69,13 @@
         </table>
     </div>
     
-    <div class = "subject">
+    <!-- <div class = "subject">
         <h2>
             Static Assets Usage
         </h2>
         <img src="<?php echo(base_url() . "dayabay_config/CZ/yslow.png")?>" style="width:99%;">
     
-    </div>
+    </div> -->
 
 </div>
 

@@ -1,0 +1,176 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Database &mdash; ODM v1.0.1 documentation</title>
+    <link rel="stylesheet" href="../../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="top" title="ODM v1.0.1 documentation" href="../../index.html" />
+    <link rel="up" title="Back-end Programming" href="../../backend.html" />
+    <link rel="next" title="Benchmark" href="../model/benchmark.html" />
+    <link rel="prev" title="Basic" href="config.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../model/benchmark.html" title="Benchmark"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="config.html" title="Basic"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">ODM v1.0.1 documentation</a> &raquo;</li>
+          <li><a href="../../backend.html" accesskey="U">Back-end Programming</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="database">
+<h1>Database<a class="headerlink" href="#database" title="Permalink to this headline">¶</a></h1>
+<p class="rubric">Available Databases</p>
+<p>Currently three (identical) offline databases can be used.</p>
+<p><tt class="file docutils literal"><span class="pre">application/config/database.php</span></tt></p>
+<div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$db</span><span class="p">[</span><span class="s1">&#39;dayabay&#39;</span><span class="p">][</span><span class="s1">&#39;hostname&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;dybdb1.ihep.ac.cn&quot;</span><span class="p">;</span>
+<span class="nv">$db</span><span class="p">[</span><span class="s1">&#39;ihep&#39;</span><span class="p">][</span><span class="s1">&#39;hostname&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;dybdb2.ihep.ac.cn&quot;</span><span class="p">;</span>
+<span class="nv">$db</span><span class="p">[</span><span class="s1">&#39;lbl&#39;</span><span class="p">][</span><span class="s1">&#39;hostname&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;dayabaydb.lbl.gov&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>They are given different names and you should load the correct one in your controller based on which server the ODM is hosted on.</p>
+<p><tt class="file docutils literal"><span class="pre">application/controllers/dybdb.php</span></tt></p>
+<div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="c1">// $this-&gt;load-&gt;database(&#39;dayabay&#39;);</span>
+<span class="c1">// $this-&gt;load-&gt;database(&#39;ihep&#39;);</span>
+<span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">database</span><span class="p">(</span><span class="s1">&#39;lbl&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p class="rubric">Common Database Configuration</p>
+<p><tt class="file docutils literal"><span class="pre">application/config/database.php</span></tt></p>
+<div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$db</span><span class="p">[</span><span class="s1">&#39;lbl&#39;</span><span class="p">][</span><span class="s1">&#39;username&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;xxxxx&quot;</span><span class="p">;</span>
+<span class="nv">$db</span><span class="p">[</span><span class="s1">&#39;lbl&#39;</span><span class="p">][</span><span class="s1">&#39;password&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;xxxxx&quot;</span><span class="p">;</span>
+<span class="nv">$db</span><span class="p">[</span><span class="s1">&#39;lbl&#39;</span><span class="p">][</span><span class="s1">&#39;database&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;offline_db&quot;</span><span class="p">;</span>
+<span class="nv">$db</span><span class="p">[</span><span class="s1">&#39;lbl&#39;</span><span class="p">][</span><span class="s1">&#39;dbdriver&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;mysql&quot;</span><span class="p">;</span>
+<span class="nv">$db</span><span class="p">[</span><span class="s1">&#39;lbl&#39;</span><span class="p">][</span><span class="s1">&#39;dbprefix&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="nv">$db</span><span class="p">[</span><span class="s1">&#39;lbl&#39;</span><span class="p">][</span><span class="s1">&#39;pconnect&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">FALSE</span><span class="p">;</span> <span class="c1">// IMPORTANT</span>
+<span class="nv">$db</span><span class="p">[</span><span class="s1">&#39;lbl&#39;</span><span class="p">][</span><span class="s1">&#39;db_debug&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">FALSE</span><span class="p">;</span>
+<span class="nv">$db</span><span class="p">[</span><span class="s1">&#39;lbl&#39;</span><span class="p">][</span><span class="s1">&#39;cache_on&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">FALSE</span><span class="p">;</span>
+<span class="nv">$db</span><span class="p">[</span><span class="s1">&#39;lbl&#39;</span><span class="p">][</span><span class="s1">&#39;cachedir&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="nv">$db</span><span class="p">[</span><span class="s1">&#39;lbl&#39;</span><span class="p">][</span><span class="s1">&#39;char_set&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;utf8&quot;</span><span class="p">;</span>
+<span class="nv">$db</span><span class="p">[</span><span class="s1">&#39;lbl&#39;</span><span class="p">][</span><span class="s1">&#39;dbcollat&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;utf8_general_ci&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The default &#8216;pconnect&#8217; is set to TRUE, which will NOT close the connection on exit. Change it to FALSE otherwise you will leave tons of stale connections in the database.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+    <!-- <img src="_static/logo.png" /> -->
+    
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../../index.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">Introduction to ODM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getstarted.html">Get Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../backend.html">Back-end Programming</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../backend.html#configuration">Configuration</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="config.html">Basic</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Database</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../backend.html#models">Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../backend.html#view">View</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../backend.html#controller">Controller</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../frontend.html">Front-end Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../deployment.html">Deploying ODM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../documentation.html">Documentation</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="config.html"
+                        title="previous chapter">Basic</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../model/benchmark.html"
+                        title="next chapter">Benchmark</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/sections/config/database.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script><h3>ODM</h3>
+<ul class="this-page-menu">
+    <li><a href="http://portal.nersc.gov/project/dayabay/dybruns/dybdb">@NERSC</a></li>
+    <li><a href="http://dayabay.ihep.ac.cn/ODM/index.php/dybdb">@IHEP</a</li>
+</ul>
+        </div>
+      </div>
+
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../model/benchmark.html" title="Benchmark"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="config.html" title="Basic"
+             >previous</a> |</li>
+        <li><a href="../../index.html">ODM v1.0.1 documentation</a> &raquo;</li>
+          <li><a href="../../backend.html" >Back-end Programming</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011 Daya Bay.
+      Last updated on Feb 10, 2011.
+    </div>
+  </body>
+</html>

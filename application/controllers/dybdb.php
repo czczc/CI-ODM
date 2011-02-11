@@ -527,8 +527,8 @@ class Dybdb extends Controller {
     
     function json_daq($run) {
         $this->load->database($this->session->userdata('database'));
-        $this->Daqinfo->LoadDaqInfo($run);
-        $this->Daqinfo->json_daq();
+        // $this->Daqinfo->LoadDaqInfo($run);
+        $this->Daqinfo->json_daq($run);
     }
     
     function json_pmt($run) {

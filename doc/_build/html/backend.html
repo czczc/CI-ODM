@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Back-end Programming &mdash; ODM Developer&#39;s Guide</title>
+    <title>Back-end Programming &mdash; ODM v1.0.1 documentation</title>
     <link rel="stylesheet" href="_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -22,8 +22,8 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
-    <link rel="top" title="ODM Developer&#39;s Guide" href="index.html" />
-    <link rel="next" title="Front-end Programming" href="frontend.html" />
+    <link rel="top" title="ODM v1.0.1 documentation" href="index.html" />
+    <link rel="next" title="Basic" href="sections/config/config.html" />
     <link rel="prev" title="Get Started" href="getstarted.html" /> 
   </head>
   <body>
@@ -34,12 +34,12 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="frontend.html" title="Front-end Programming"
+          <a href="sections/config/config.html" title="Basic"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="getstarted.html" title="Get Started"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">ODM Developer&#39;s Guide</a> &raquo;</li> 
+        <li><a href="index.html">ODM v1.0.1 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -51,8 +51,31 @@
   <div class="section" id="back-end-programming">
 <h1>Back-end Programming<a class="headerlink" href="#back-end-programming" title="Permalink to this headline">¶</a></h1>
 <p>Back-end programming refers to the scripts that are run on the server side. ODM uses the PHP with the CodeIgniter Framework at the back-end.</p>
-<div class="section" id="model">
-<h2>Model<a class="headerlink" href="#model" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<p>The default CodeIgniter configurations are mostly good enough. We do need to make a few tweaks for <abbr title="Offline Data Monitor">ODM</abbr>.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sections/config/config.html">Basic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sections/config/database.html">Database</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="models">
+<h2>Models<a class="headerlink" href="#models" title="Permalink to this headline">¶</a></h2>
+<p>The followings are the currently implemented CodeIgniter Model classes.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sections/model/benchmark.html">Benchmark</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sections/model/daqinfo.html">Daqinfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sections/model/diagnostics.html">Diagnostics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sections/model/pmtinfo.html">Pmtinfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sections/model/pqm.html">Pqm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sections/model/runinfo.html">Runinfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sections/model/runlist.html">Runlist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sections/model/slowmonitor.html">Slowmonitor</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="view">
 <h2>View<a class="headerlink" href="#view" title="Permalink to this headline">¶</a></h2>
@@ -66,24 +89,51 @@
           </div>
         </div>
       </div>
+    <!-- <img src="_static/logo.png" /> -->
+    
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Back-end Programming</a><ul>
-<li><a class="reference internal" href="#model">Model</a></li>
-<li><a class="reference internal" href="#view">View</a></li>
-<li><a class="reference internal" href="#controller">Controller</a></li>
+<h3><a href="index.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction to ODM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getstarted.html">Get Started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Back-end Programming</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#configuration">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sections/config/config.html">Basic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sections/config/database.html">Database</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#models">Models</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sections/model/benchmark.html">Benchmark</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sections/model/daqinfo.html">Daqinfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sections/model/diagnostics.html">Diagnostics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sections/model/pmtinfo.html">Pmtinfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sections/model/pqm.html">Pqm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sections/model/runinfo.html">Runinfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sections/model/runlist.html">Runlist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sections/model/slowmonitor.html">Slowmonitor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#view">View</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#controller">Controller</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="frontend.html">Front-end Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deployment.html">Deploying ODM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentation.html">Documentation</a></li>
 </ul>
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="getstarted.html"
                         title="previous chapter">Get Started</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="frontend.html"
-                        title="next chapter">Front-end Programming</a></p>
+  <p class="topless"><a href="sections/config/config.html"
+                        title="next chapter">Basic</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/backend.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
 <div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
@@ -96,9 +146,14 @@
     Enter search terms or a module, class or function name.
     </p>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script type="text/javascript">$('#searchbox').show(0);</script><h3>ODM</h3>
+<ul class="this-page-menu">
+    <li><a href="http://portal.nersc.gov/project/dayabay/dybruns/dybdb">@NERSC</a></li>
+    <li><a href="http://dayabay.ihep.ac.cn/ODM/index.php/dybdb">@IHEP</a</li>
+</ul>
         </div>
       </div>
+
       <div class="clearer"></div>
     </div>
     <div class="related">
@@ -108,15 +163,17 @@
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="frontend.html" title="Front-end Programming"
+          <a href="sections/config/config.html" title="Basic"
              >next</a> |</li>
         <li class="right" >
           <a href="getstarted.html" title="Get Started"
              >previous</a> |</li>
-        <li><a href="index.html">ODM Developer&#39;s Guide</a> &raquo;</li> 
+        <li><a href="index.html">ODM v1.0.1 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
+        &copy; Copyright 2011 Daya Bay.
+      Last updated on Feb 10, 2011.
     </div>
   </body>
 </html>

@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>ODM Developer’s Guide &mdash; ODM Developer&#39;s Guide</title>
+    <title>ODM Developer’s Guide &mdash; ODM v1.0.1 documentation</title>
     <link rel="stylesheet" href="_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -22,7 +22,7 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
-    <link rel="top" title="ODM Developer&#39;s Guide" href="#" />
+    <link rel="top" title="ODM v1.0.1 documentation" href="#" />
     <link rel="next" title="Introduction to ODM" href="intro.html" /> 
   </head>
   <body>
@@ -35,7 +35,7 @@
         <li class="right" >
           <a href="intro.html" title="Introduction to ODM"
              accesskey="N">next</a> |</li>
-        <li><a href="#">ODM Developer&#39;s Guide</a> &raquo;</li> 
+        <li><a href="#">ODM v1.0.1 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -57,7 +57,22 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="backend.html">Back-end Programming</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="backend.html#model">Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backend.html#configuration">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sections/config/config.html">Basic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sections/config/database.html">Database</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="backend.html#models">Models</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sections/model/benchmark.html">Benchmark</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sections/model/daqinfo.html">Daqinfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sections/model/diagnostics.html">Diagnostics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sections/model/pmtinfo.html">Pmtinfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sections/model/pqm.html">Pqm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sections/model/runinfo.html">Runinfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sections/model/runlist.html">Runlist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sections/model/slowmonitor.html">Slowmonitor</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="backend.html#view">View</a></li>
 <li class="toctree-l2"><a class="reference internal" href="backend.html#controller">Controller</a></li>
 </ul>
@@ -68,6 +83,7 @@
 <li class="toctree-l2"><a class="reference internal" href="frontend.html#style-guide">Style Guide</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="deployment.html">Deploying ODM</a></li>
 <li class="toctree-l1"><a class="reference internal" href="documentation.html">Documentation</a></li>
 </ul>
 </div>
@@ -84,19 +100,28 @@
           </div>
         </div>
       </div>
+    <!-- <img src="_static/logo.png" /> -->
+    
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="#">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">ODM Developer&#8217;s Guide</a><ul>
-</ul>
-</li>
-<li><a class="reference internal" href="#quick-links">Quick Links</a></li>
+<h3><a href="#">Table Of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction to ODM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getstarted.html">Get Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backend.html">Back-end Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="frontend.html">Front-end Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deployment.html">Deploying ODM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentation.html">Documentation</a></li>
 </ul>
 
   <h4>Next topic</h4>
   <p class="topless"><a href="intro.html"
                         title="next chapter">Introduction to ODM</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/index.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
 <div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
@@ -109,9 +134,14 @@
     Enter search terms or a module, class or function name.
     </p>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script type="text/javascript">$('#searchbox').show(0);</script><h3>ODM</h3>
+<ul class="this-page-menu">
+    <li><a href="http://portal.nersc.gov/project/dayabay/dybruns/dybdb">@NERSC</a></li>
+    <li><a href="http://dayabay.ihep.ac.cn/ODM/index.php/dybdb">@IHEP</a</li>
+</ul>
         </div>
       </div>
+
       <div class="clearer"></div>
     </div>
     <div class="related">
@@ -123,10 +153,12 @@
         <li class="right" >
           <a href="intro.html" title="Introduction to ODM"
              >next</a> |</li>
-        <li><a href="#">ODM Developer&#39;s Guide</a> &raquo;</li> 
+        <li><a href="#">ODM v1.0.1 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
+        &copy; Copyright 2011 Daya Bay.
+      Last updated on Feb 10, 2011.
     </div>
   </body>
 </html>

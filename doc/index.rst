@@ -7,12 +7,13 @@ ODM Developer's Guide
 =================================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    
    intro
    getstarted
    backend
    frontend
+   deployment
    documentation
     
 
@@ -21,5 +22,7 @@ Quick Links
 
 * :ref:`genindex`
 * :ref:`search`
+
+.. * :download:`PDF version of this Documentation <_static/ODM.pdf>`  
 .. * :ref:`modindex`
 

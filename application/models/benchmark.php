@@ -8,7 +8,7 @@ class Benchmark extends Model
 		parent::Model();
 	}
 
-    function DoBenchMark($test, $db) {
+    function DoBenchmark($test, $db) {
         $this->benchmark->mark('login_start');
         $this->load->database($db);
         $this->current_db = $db;
@@ -49,7 +49,7 @@ class Benchmark extends Model
     function json_benchmark($test, $db) {
         $json = "{\n";
         
-        $json .= ('"benchmark":"' . $this->DoBenchMark($test, $db) . '",' . "\n");
+        $json .= ('"benchmark":"' . $this->DoBenchmark($test, $db) . '",' . "\n");
         $json .= ('"db":"' . $this->current_db . '"' . "\n");
         
         $json .= "}\n";

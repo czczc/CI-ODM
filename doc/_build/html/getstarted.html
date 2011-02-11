@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Get Started &mdash; ODM Developer&#39;s Guide</title>
+    <title>Get Started &mdash; ODM v1.0.1 documentation</title>
     <link rel="stylesheet" href="_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -22,7 +22,7 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
-    <link rel="top" title="ODM Developer&#39;s Guide" href="index.html" />
+    <link rel="top" title="ODM v1.0.1 documentation" href="index.html" />
     <link rel="next" title="Back-end Programming" href="backend.html" />
     <link rel="prev" title="Introduction to ODM" href="intro.html" /> 
   </head>
@@ -39,7 +39,7 @@
         <li class="right" >
           <a href="intro.html" title="Introduction to ODM"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">ODM Developer&#39;s Guide</a> &raquo;</li> 
+        <li><a href="index.html">ODM v1.0.1 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -51,16 +51,16 @@
   <div class="section" id="get-started">
 <h1>Get Started<a class="headerlink" href="#get-started" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="language-prerequisite">
-<span id="index-0"></span><h2>Language Prerequisite<a class="headerlink" href="#language-prerequisite" title="Permalink to this headline">¶</a></h2>
+<h2>Language Prerequisite<a class="headerlink" href="#language-prerequisite" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>PHP &amp; SQL</li>
 <li>JavaScript</li>
 <li>HTML / CSS</li>
 </ul>
-<p>You don&#8217;t need to read too deep into the languages, just enough to get you started. The best way to learn a language is by using it in your project, not by reading the book.</p>
+<p>You don&#8217;t need to read too deep into the languages, just enough to get you started. The best way to learn a language is by using it in your project, not by reading the textbooks.</p>
 </div>
 <div class="section" id="framework-prerequisite">
-<span id="index-1"></span><h2>Framework Prerequisite<a class="headerlink" href="#framework-prerequisite" title="Permalink to this headline">¶</a></h2>
+<h2>Framework Prerequisite<a class="headerlink" href="#framework-prerequisite" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>PHP Framework: <a class="reference external" href="http://codeigniter.com/">CodeIgniter</a></li>
 <li>JavaScript Framework: <a class="reference external" href="http://jquery.com/">JQuery</a></li>
@@ -69,28 +69,38 @@
 <a class="reference external" href="http://net.tutsplus.com/sessions/codeigniter-from-scratch/">CodeIgniter From Scratch</a> | <a class="reference external" href="http://net.tutsplus.com/articles/web-roundups/jquery-for-absolute-beginners-video-series/">JQuery For Absolute Beginners</a>) that should get you started.</p>
 </div>
 <div class="section" id="setup-a-test-web-server">
-<span id="index-2"></span><h2>Setup a Test Web Server<a class="headerlink" href="#setup-a-test-web-server" title="Permalink to this headline">¶</a></h2>
-<p>You will need a test web server during development. The recommended way to setup the web server on each platform is:</p>
+<h2>Setup a Test Web Server<a class="headerlink" href="#setup-a-test-web-server" title="Permalink to this headline">¶</a></h2>
+<p>You will need a test web server during development. The recommended way to setup an Apache web server on each platform with PHP and MySQL support is:</p>
 <ul class="simple">
 <li>Windows: <a class="reference external" href="http://www.apachefriends.org/en/xampp-windows.html">XAMPP</a></li>
 <li>Mac: <a class="reference external" href="http://www.mamp.info/en/index.html">MAMP</a></li>
-<li>Linux: following google to setup the <strong>LAMP</strong> server</li>
+<li>Linux: follow Google to setup a <strong>LAMP</strong> server</li>
 </ul>
-<p>To make sure the web server is set up correctly, write a simple php file, for example</p>
+<p>To make sure the test web server is running and the configuration files are correct, write a simple php file, for example</p>
 <div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nb">phpinfo</span><span class="p">();</span> <span class="cp">?&gt;</span><span class="x"></span>
 </pre></div>
 </div>
 <p>put it to the correct document root directory, and see if it can be displayed on your web browser with the correct url.</p>
 </div>
 <div class="section" id="setup-a-code-development-environment">
-<span id="index-3"></span><h2>Setup a Code Development Environment<a class="headerlink" href="#setup-a-code-development-environment" title="Permalink to this headline">¶</a></h2>
-<p>The ODM code is hosted on the official Daya Bay svn repository. Change to your web document root directory and check out the code</p>
+<h2>Setup a Code Development Environment<a class="headerlink" href="#setup-a-code-development-environment" title="Permalink to this headline">¶</a></h2>
+<p>The <abbr title="Offline Data Monitor">ODM</abbr> code is hosted on the official Daya Bay svn repository. Change to your web document root directory and check out the code:</p>
 <div class="highlight-sh"><div class="highlight"><pre>svn co http://dayabay.ihep.ac.cn/svn/dybsvn/groups/Web/ODM
 </pre></div>
 </div>
 <p>Try to see if you can understand the basic code structure.</p>
-<p>You will need to create a &#8221;.htaccess&#8221; file under the &#8220;ODM&#8221; directory that you just checked out with the following content:</p>
-<div class="highlight-apache"><div class="highlight"><pre><span class="nt">&lt;IfModule</span> <span class="s">mod_rewrite.c</span><span class="nt">&gt;</span>
+<p>You will need to create a <tt class="file docutils literal"><span class="pre">.htacess</span></tt> file under the <tt class="file docutils literal"><span class="pre">ODM/</span></tt> directory that you just checked out with the following content:</p>
+<div class="highlight-apache"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span class="nt">&lt;IfModule</span> <span class="s">mod_rewrite.c</span><span class="nt">&gt;</span>
     <span class="nb">RewriteEngine</span> <span class="k">On</span>
     <span class="nb">RewriteBase</span> <span class="sx">/path/to/ODM/</span>
     <span class="nb">RewriteCond</span> %{REQUEST_FILENAME} !-f
@@ -102,8 +112,8 @@
     <span class="nb">ErrorDocument</span> <span class="m">404</span> <span class="sx">/index.php</span>
 <span class="nt">&lt;/IfModule&gt;</span>
 </pre></div>
-</div>
-<p>Replace &#8220;/path/to/ODM/&#8221; with the correct relative url of your test ODM site. Does the ODM site show up in your web browser?</p>
+</td></tr></table></div>
+<p>Replace <tt class="file docutils literal"><span class="pre">/path/to/ODM/</span></tt> with the correct relative url of your test <abbr title="Offline Data Monitor">ODM</abbr> site. Does the ODM site show up in your web browser?</p>
 <p>You will need a good Code Editor or IDE for the developing. While <em>vi</em> or <em>emacs</em> has been the long time favorite by the programmers, web developers tend to use something more &#8216;modern&#8217;.
 <a class="reference external" href="http://www.aptana.com/products/studio2">Aptana</a> is a good free IDE that is available on all platforms. If you are using a mac, then <a class="reference external" href="http://macromates.com/">TextMate</a> is highly recommended even though it&#8217;s not free.</p>
 <p>Congratulations! Now you are ready for the actual coding. The fun part begins.</p>
@@ -114,17 +124,24 @@
           </div>
         </div>
       </div>
+    <!-- <img src="_static/logo.png" /> -->
+    
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Get Started</a><ul>
-<li><a class="reference internal" href="#language-prerequisite">Language Prerequisite</a></li>
-<li><a class="reference internal" href="#framework-prerequisite">Framework Prerequisite</a></li>
-<li><a class="reference internal" href="#setup-a-test-web-server">Setup a Test Web Server</a></li>
-<li><a class="reference internal" href="#setup-a-code-development-environment">Setup a Code Development Environment</a></li>
+<h3><a href="index.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction to ODM</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Get Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#language-prerequisite">Language Prerequisite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#framework-prerequisite">Framework Prerequisite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setup-a-test-web-server">Setup a Test Web Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setup-a-code-development-environment">Setup a Code Development Environment</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="backend.html">Back-end Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="frontend.html">Front-end Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deployment.html">Deploying ODM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentation.html">Documentation</a></li>
 </ul>
 
   <h4>Previous topic</h4>
@@ -133,6 +150,11 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="backend.html"
                         title="next chapter">Back-end Programming</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/getstarted.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
 <div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
@@ -145,9 +167,14 @@
     Enter search terms or a module, class or function name.
     </p>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script type="text/javascript">$('#searchbox').show(0);</script><h3>ODM</h3>
+<ul class="this-page-menu">
+    <li><a href="http://portal.nersc.gov/project/dayabay/dybruns/dybdb">@NERSC</a></li>
+    <li><a href="http://dayabay.ihep.ac.cn/ODM/index.php/dybdb">@IHEP</a</li>
+</ul>
         </div>
       </div>
+
       <div class="clearer"></div>
     </div>
     <div class="related">
@@ -162,10 +189,12 @@
         <li class="right" >
           <a href="intro.html" title="Introduction to ODM"
              >previous</a> |</li>
-        <li><a href="index.html">ODM Developer&#39;s Guide</a> &raquo;</li> 
+        <li><a href="index.html">ODM v1.0.1 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
+        &copy; Copyright 2011 Daya Bay.
+      Last updated on Feb 10, 2011.
     </div>
   </body>
 </html>

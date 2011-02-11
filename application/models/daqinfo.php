@@ -57,7 +57,9 @@ class Daqinfo extends Model
         // $this->_TestDaqInfo();
  	}
  	
- 	function json_daq() {
+ 	function json_daq($run) {
+ 	    $this->LoadDaqInfo($run);
+ 	    
         $json = "{\n";
         
         $json .= ('"active": "' . $this->active_detector . '",' . "\n");
@@ -266,6 +268,7 @@ class Daqinfo extends Model
         }
 	}
  	
+ 	// Convert trigger code to a string. Diffrent trigger types joined by ' | '.
  	function _GetTriggerTypeString($trigger) {
         $trigger_str ='';
 	    foreach ( $this->triggerDict as $trigger_name => $trigger_bit) {
