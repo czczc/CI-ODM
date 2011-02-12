@@ -8,6 +8,7 @@ Runinfo
    
    | This model queries the basic run information. 
    | This model requires explicitly loading offline database in advance
+   | **TODO** switch interface to |Ajax|
    
    Example usage in the controller:
    
@@ -53,7 +54,7 @@ Runinfo
                   'HomeC' => '',    // 'Yes' or 'No'
                   'duration' => '',  // run duration [s]
                   'ledFreq' => '',  // LED Frequceny [Hz]
-                  'ledPulseSep' => '',  // pulse separation [ns] if there are two LEDs
+                  'ledPulseSep' => '',  // double pulse separation [ns]
                   'ltbMode' => '',  // if 1, then force trigger
               ),
               // ...

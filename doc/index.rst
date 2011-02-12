@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-ODM Developer's Guide
+ODM Developer's Manual
 =================================================
 
 .. toctree::
@@ -14,7 +14,7 @@ ODM Developer's Guide
    backend
    frontend
    deployment
-   documentation
+   faq
     
 
 Quick Links

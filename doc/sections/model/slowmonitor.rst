@@ -28,3 +28,28 @@ Slowmonitor
             $this->Slowmonitor->json_temperature();
             // process the returned JSON data within javascript
         }
+        
+   .. centered:: *Methods*
+   
+   .. method:: json_temperature()
+      
+      | Query the AD temperature information
+      | Internally calls :meth:`GetTemperatureInfo`
+      
+      :return: JSON data of the AD temperature at different time
+       
+         .. code-block:: javascript
+             
+             {
+             "1286091366":{
+                 "Temp_PT1":"21.87",
+                 "Temp_PT2":"21.74",
+                 "Temp_PT3":"21.66",
+                 "Temp_PT4":"21.32",
+                 "Temp_PT5":"20.79"
+            },
+            // more temperature data at other timestamps
+            } 
+             
+             
+             

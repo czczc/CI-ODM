@@ -19,7 +19,7 @@ The default CodeIgniter configurations are mostly good enough. We do need to mak
 Models
 ===============
 
-The followings are the currently implemented CodeIgniter Model classes.
+All heavy queries and complicated algorithms are handled by ODM's Model classes. The followings are the currently implemented ODM models.
  
 .. toctree::
    :maxdepth: 2
@@ -34,9 +34,25 @@ The followings are the currently implemented CodeIgniter Model classes.
    sections/model/slowmonitor
    
 
-View
+Views
 ===============
 
+Views are the basic layouts of the web pages that are loaded by the controllers.
 
-Controller
+.. toctree::
+   :maxdepth: 1
+   
+   sections/view/views
+
+Controllers
 ===============
+
+Controller is the bridge between Views and Models. The Controller ``Class::Function(x, y, z)`` maps directly to the URL ``Class/Function/x/y/z`` that is very convenient for building up a dynamic website. Currently the whole ODM is under one Controller class. This may change in the future with the sacrifice of having to annouce new URLs.
+
+.. toctree::
+   :maxdepth: 1
+   
+   sections/controller/dybdb
+   
+   
+   

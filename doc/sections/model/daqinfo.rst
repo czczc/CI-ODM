@@ -60,7 +60,7 @@ Daqinfo
             // and FEE setting for all other detectors ...
             }  
             
-   .. note:: Following attributes and methods are meant to be used internally only.
+   .. note:: The following attributes and methods are meant to be used internally only.
 
    .. centered:: *Attributes*
 

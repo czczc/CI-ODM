@@ -20,5 +20,8 @@ Introduction to ODM
 
 Beginner web developers should start from the :doc:`Get Started <getstarted>`  Chapter. Experienced developers can go directly to the API Documentations. 
 
+This manual is generated using the
+`Sphinx <http://sphinx.pocoo.org/>`_ documentation generator.
+
 
 

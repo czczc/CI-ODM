@@ -2,10 +2,11 @@
 Get Started
 ******************
 
-.. Comment .................................
 
-Language Prerequisite
+Prerequisite
 ======================
+
+.. rubric:: Languages
 
 * PHP & SQL
 * JavaScript
@@ -13,10 +14,8 @@ Language Prerequisite
 
 You don't need to read too deep into the languages, just enough to get you started. The best way to learn a language is by using it in your project, not by reading the textbooks.
 
-.. Comment .................................
 
-Framework Prerequisite
-===========================
+.. rubric:: Framework
 
 * PHP Framework: `CodeIgniter <http://codeigniter.com/>`_
 * JavaScript Framework: `JQuery <http://jquery.com/>`_
@@ -25,10 +24,11 @@ Framework Prerequisite
 After you have learned some basics of the languages, you can start trying out the two wonderful frameworks that are used in ODM. There are two excellent video tutorial series for beginners (
 `CodeIgniter From Scratch <http://net.tutsplus.com/sessions/codeigniter-from-scratch/>`_ | `JQuery For Absolute Beginners <http://net.tutsplus.com/articles/web-roundups/jquery-for-absolute-beginners-video-series/>`_) that should get you started.
 
-.. Comment .................................
+Setup a Code Development Environment
+======================================
 
-Setup a Test Web Server
-=================================
+.. rubric:: Setup a Test Web Server
+
 You will need a test web server during development. The recommended way to setup an Apache web server on each platform with PHP and MySQL support is:
 
 * Windows: `XAMPP <http://www.apachefriends.org/en/xampp-windows.html>`_
@@ -41,12 +41,11 @@ To make sure the test web server is running and the configuration files are corr
 
     <?php echo phpinfo(); ?>
     
-put it to the correct document root directory, and see if it can be displayed on your web browser with the correct url. 
+put it to the correct document root directory, and see if it can be displayed on your web browser with the correct URL. 
 
-.. Comment .................................
 
-Setup a Code Development Environment
-======================================
+.. rubric:: Get the Souce Code
+
 The |ODM| code is hosted on the official Daya Bay svn repository. Change to your web document root directory and check out the code:
 
 .. code-block:: sh
@@ -58,7 +57,6 @@ Try to see if you can understand the basic code structure.
 You will need to create a :file:`.htacess` file under the :file:`ODM/` directory that you just checked out with the following content:
 
 .. code-block:: apache
-    :linenos:
 
     <IfModule mod_rewrite.c>
         RewriteEngine On

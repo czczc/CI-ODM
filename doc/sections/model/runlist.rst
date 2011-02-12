@@ -8,6 +8,7 @@ Runlist
    
    | This model queries a filtered run list.
    | This model requires explicitly loading offline database in advance
+   | **TODO** switch interface to |Ajax|
    
    Example usage in the controller:
    

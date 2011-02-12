@@ -55,7 +55,7 @@ Replace :file:`/path/to/ODM/` with the correct relative url of your test ODM sit
 
 .. rubric:: Setup Autoload
 
-You can autoload modules at every page load. However be aware that it increases the response time of every page! The recommended autoload setup for ODM is:
+To simplify the code, you can autoload models on every page load. However be aware that it increases the response time of every page! The recommended autoload setup for ODM is:
 
 :file:`application/config/autoload.php`
 
