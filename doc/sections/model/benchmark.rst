@@ -58,7 +58,7 @@ Benchmark
    
    .. method:: DoBenchmark($test, $db)
    
-      Benchmarks the Database Performance. Refer to :meth:`.json_benchmark`
+      Benchmarks the Database Performance. Refer to :meth:`json_benchmark`
             
       :return: elapsed time [sec] from running the benchmark test 
       

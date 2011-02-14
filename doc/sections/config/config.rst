@@ -69,3 +69,14 @@ To simplify the code, you can autoload models on every page load. However be awa
      // it's OK to load the useful helpers
      $autoload['helper'] = array('url', 'form', 'file');
 
+
+.. rubric:: Setup Session Expire Time
+
+To avoid annoying people too much, ODM sets the session expire time to 12 hours:
+
+:file:`application/config/config.php`
+
+.. code-block:: php
+
+   <?php
+   $config['sess_expiration']		= 43200;
