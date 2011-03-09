@@ -1,6 +1,8 @@
 var this_url = window.location.href;
 var root_url = this_url.substring(0,this_url.indexOf('dybdb')) + '/';
 var base_url = this_url.substring(0,this_url.indexOf('dybdb')) + 'dybdb/';
+var is_sim_data = false;
+if ($('#sim_data').html()) { is_sim_data = true; }
 var loading_img = root_url + "styles/images/loading.gif";
 
 var link_loading_img = '<img style="display:inline" src="' 
@@ -113,7 +115,9 @@ function load_daq() {
 
 function load_diagnostics() {
     //.getJSON use get method, which is not good for codeIgniter
+    // console.log(is_sim_data);
     var url = base_url + 'diagnostics_json_figurelist/' + runNo;
+    if (is_sim_data) { url = url + '/sim'}
     $.post(
         url, '',
         function(data) {
@@ -292,6 +296,8 @@ function parse_detname(detname) {
 }
 
 function build_pmtmap(detname) {
+    var sim_data_link = '';
+    if (is_sim_data) { sim_data_link = '/sim'};
     var site_detector = parse_detname(detname);
     var site = site_detector[0];
     var detector = site_detector[1];
@@ -312,7 +318,7 @@ function build_pmtmap(detname) {
         for (var connector=1; connector<=16; connector++) {
             str_connector = sprintf("%02d", connector);
             html += '<td connector="' + str_connector + '">';
-            link = '<a href="' + base_url + 'channel/' + runNo + '/' + detname + '/' + str_board + '/' + str_connector + '">O</a>';
+            link = '<a href="' + base_url + 'channel/' + runNo + '/' + detname + '/' + str_board + '/' + str_connector + sim_data_link + '">O</a>';
             html += link;
             html += '</td>';
         }
@@ -371,6 +377,7 @@ function build_pmtmap(detname) {
 var channel_info = {};
 function load_channels(runno, detname) {
     var url = base_url + 'json_channels/' + runNo + '/' + detname;
+    if (is_sim_data) { url = url + '/sim'}
     $.post(url, 
         function(data) {
             channel_info = data;
@@ -547,5 +554,12 @@ function str_force_reload(str, timestamp) {
     str = str + '?v=' + timestamp;
     // console.log(str);
     return str;
+}
+
+if (is_sim_data) {
+    $('#pqm_div').empty();
+    $('#general_div').empty();
+    $('#calib_div').empty();
+    
 }
 

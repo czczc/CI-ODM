@@ -1,5 +1,5 @@
 *********************
-List of ODM Views  
+ODM Views  
 *********************
 
 All views are under :file:`application/views/dybdb_view/`

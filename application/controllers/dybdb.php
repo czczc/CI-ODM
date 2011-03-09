@@ -152,38 +152,57 @@ class Dybdb extends Controller {
             ));
     } 
 
+    function quick_search($text) {
+        $run = $this->input->post('findrun'); 
+        // example input 2068sim
+        preg_match('/^(\d+)(.*)/', $run, $matches);
+        $run = $matches[1];
+        $is_sim = '';
+        if (preg_match('/sim/', $matches[2])) { $is_sim = '/sim'; }
+        $url = 'dybdb/findrun/'. $run . $is_sim;
+        // print_r($url);
+        redirect($url, 'refresh');
+        // $this->findrun($run, $is_sim);
+        // redirect('dybdb/runtype/All', 'refresh');
+    }
+    
     function findrun($run, $currentrun) {
         if (!$this->session->userdata('logged_in')) {
             $this->login();
             return;
         }
         $this->load->database($this->session->userdata('database'));
+        $data['run'] = $run;
+        $this->Runinfo->FindRun($run);
+        $data['runinfo'] = $this->Runinfo;
         
-        $data['errors'] = '';		
-        $config = array(
-            array(
-                'field'   => 'findrun',
-                'label'   => 'Run Number',
-                'rules'   => 'trim|required|numeric'
-            ),					
-        );
-        $this->form_validation->set_rules($config);
-        $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
+        $this->Runlist->get_csvlist();
+        $data['csv_list'] = $this->Runlist->csv_list;
+        
+        $data['pqm'] = $this->Pqm;
+        if(isset($currentrun)) { $data['currentrun'] = $currentrun; }
+        
+        $this->load->view('dybdb_view/findrun', $data);
+        
+        // $data['errors'] = '';        
+        // $config = array(
+        //     array(
+        //         'field'   => 'findrun',
+        //         'label'   => 'Run Number',
+        //         'rules'   => 'trim|required|numeric'
+        //     ),                   
+        // );
+        // $this->form_validation->set_rules($config);
+        // $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
 
-        if((!$this->form_validation->run()) && (!isset($run)) ) {
-            $this->load->view('dybdb_view/findrun', $data);   		
-        }
-        else {
-            if (!isset($run) ) { $run = $this->input->post('findrun'); }
-            $data['run'] = $run;
-            $this->Runinfo->FindRun($run);
-            $data['runinfo'] = $this->Runinfo;
-            
-            $this->Runlist->get_csvlist();
-            $data['csv_list'] = $this->Runlist->csv_list;
-            
-            $data['pqm'] = $this->Pqm;
-            if(isset($currentrun)) { $data['currentrun'] = $currentrun; }
+        // if((!$this->form_validation->run()) && (!isset($run)) ) {
+        //     $this->load->view('dybdb_view/findrun', $data);          
+        // }
+        // else {
+        //     if (!isset($run) ) { 
+        //         $run = $this->input->post('findrun'); 
+        //     }
+
             
             // if ($this->Runinfo->has_diagnostics) {
             //     $this->Diagnostics->getrunlist();
@@ -196,8 +215,7 @@ class Dybdb extends Controller {
             //         $data['pmts'][$i] = $this->Diagnostics->getarray_pmtname($run, $i, $channelsname, $this->Pmtinfo->pmtFEE_dict);        
             //     }
             // }
-            $this->load->view('dybdb_view/findrun', $data);
-        }
+        // }
     }
 
     function unset_session_options() {
@@ -374,12 +392,15 @@ class Dybdb extends Controller {
         $this->load->view('dybdb_view/diagnostics_view', $data);        
     }
     
-    function channel($run, $detname, $board, $connector) {
+    function channel($run, $detname, $board, $connector, $is_sim) {
         if (!$this->session->userdata('logged_in')) {
             $this->login();
             return;
         }
         
+        if ($is_sim == 'sim') {
+            $this->Diagnostics->is_sim = TRUE;
+        }
         $this->Diagnostics->getrunlist();
         $this->Diagnostics->readrun($run);
         
@@ -412,6 +433,18 @@ class Dybdb extends Controller {
         $this->Diagnostics->getrunlist();
         $data['runlist'] = $this->Diagnostics->getarray_runlist();
         $this->load->view('dybdb_view/search_diagnostics_view', $data);
+    }
+    
+    function search_sim() {
+        if ( ! $this->session->userdata('logged_in')) {
+            $this->login();
+            return;
+        }
+        $this->Diagnostics->is_sim = TRUE;
+        $this->Diagnostics->getrunlist();
+        $data['runlist'] = $this->Diagnostics->getarray_runlist();
+        // print_r($data['runlist']);
+        $this->load->view('dybdb_view/search_sim_view', $data);
     }
     
     function search_pqm() {
@@ -482,16 +515,16 @@ class Dybdb extends Controller {
         $this->Slowmonitor->SpadeRSS();
     }
         
-    function xml_runlist() {
-        $this->Diagnostics->xml_runlist();
+    function xml_runlist($is_sim) {
+        $this->Diagnostics->xml_runlist($is_sim);
     }
     
     function diagnostics_json_runlist() {
         $this->Diagnostics->json_runlist();
     }
     
-    function diagnostics_json_figurelist($run) {
-        $this->Diagnostics->json_figurelist($run);
+    function diagnostics_json_figurelist($run, $is_sim) {
+        $this->Diagnostics->json_figurelist($run, $is_sim);
     }
     
     function pqm_xml_runlist() {
@@ -541,9 +574,9 @@ class Dybdb extends Controller {
         $this->Pmtinfo->json_pmtinfo($detname);
     }
     
-    function json_channels($run, $detname) {
-        $this->load->database($this->session->userdata('database'));
-        $this->Diagnostics->json_channels($run, $detname);
+    function json_channels($run, $detname, $is_sim) {
+        // $this->load->database($this->session->userdata('database'));
+        $this->Diagnostics->json_channels($run, $detname, $is_sim);
     }
     
     function test_pmt() {

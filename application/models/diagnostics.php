@@ -5,6 +5,7 @@ class Diagnostics extends Model
     var $site_nopasswd = 'http://portal.nersc.gov/project/dayabay/';
     var $prefix = 'dybprod/';
     var $runs_xml = 'runs.xml'; 
+    var $is_sim = FALSE;
     
     var $runlist = array(); // runno => { runindex => filename }
     
@@ -15,6 +16,10 @@ class Diagnostics extends Model
  	function _SetSite($run) {
  	    if ($run < 7000) { $this->site_nopasswd = 'http://blinkin.krl.caltech.edu/~chao/'; }
  	    else { $this->site_nopasswd = 'http://portal.nersc.gov/project/dayabay/'; }
+ 	    if ($this->is_sim) { 
+ 	        $this->prefix = 'dybprodSim/';
+ 	        $this->site_nopasswd = 'http://portal.nersc.gov/project/dayabay/'; 
+ 	    }
  	}
  	
  	function _IsPasswdProtected($run) {
@@ -29,7 +34,10 @@ class Diagnostics extends Model
         //     str_replace('http://', 'http://dayabay:3quarks@', 
         //     $this->site_nopasswd . $this->prefix . $this->runs_xml)
         // );
-        
+        if ($this->is_sim) { 
+ 	        $this->prefix = 'dybprodSim/';
+ 	        $this->site_nopasswd = 'http://portal.nersc.gov/project/dayabay/'; 
+ 	    }
         // run list should always be from pdsf
         $xml = simplexml_load_file(
             $this->site_nopasswd . $this->prefix . $this->runs_xml
@@ -159,7 +167,10 @@ class Diagnostics extends Model
  	    return $pmts;
  	}
  	 	
-    function xml_runlist() {
+    function xml_runlist($is_sim) {
+        if($is_sim == 'sim') {
+            $this->is_sim = TRUE;
+        }
         $this->getrunlist();
         
         header('Content-Type: application/xml');
@@ -186,8 +197,12 @@ class Diagnostics extends Model
         echo $json;
  	}
     
-    function json_figurelist($run) {
+    function json_figurelist($run, $is_sim) {
+        if ($is_sim == 'sim') {
+            $this->is_sim = TRUE;
+        }
         $this->getrunlist();
+        // print_r($this->runlist);
         $this->readrun($run);
         $detectors = $this->runlist[$run]['detectors'];
         
@@ -257,7 +272,10 @@ class Diagnostics extends Model
         echo $json;
     }
     
-    function xml_figureurl($run, $figname, $channelname, $xml_url) {
+    function xml_figureurl($run, $figname, $channelname, $xml_url, $is_sim) {
+        if ($is_sim = 'sim') {
+            $this->is_sim = TRUE;
+        }
         $this->readrun_xml($run, $xml_url);
         
         header('Content-Type: application/xml');
@@ -290,7 +308,10 @@ class Diagnostics extends Model
         echo "</diagnostic_index>";
     }
  	
- 	function json_channels($run, $detname) {
+ 	function json_channels($run, $detname, $is_sim) {
+ 	    if ($is_sim == 'sim') {
+            $this->is_sim = TRUE;
+        }
  	    $this->getrunlist();
         $this->readrun($run);
  	    $detectors = $this->getdict_detectors($run);

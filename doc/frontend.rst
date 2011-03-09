@@ -9,9 +9,15 @@ JavaScript
 
 .. toctree::
    :maxdepth: 1
-   
+
+   sections/js/jquery
+   sections/js/odm   
    sections/js/external
 
-Style Guide
+CSS
 ===============
 
+.. toctree::
+   :maxdepth: 1
+
+   sections/css/style

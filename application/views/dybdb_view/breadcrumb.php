@@ -5,7 +5,7 @@
         <?php echo anchor('dybdb/currentrun', 'Current Run&ensp;'); ?>
         <?php echo anchor('dybdb/logout', 'Logout&ensp;'); ?>
 
-        <?php echo form_open('dybdb/findrun', array('id' => 'main-search'));?>
+        <?php echo form_open('dybdb/quick_search', array('id' => 'main-search'));?>
         <label for="search-field" id="search-field-label">Search</label>
         <input type="text" tabindex="1" maxlength="255" name="findrun" id="search-field"/>
         <input type="image" alt="Find" value="Find" src=<?php echo(base_url() . "styles/images/search.png")?> id="search-button"/>  
@@ -40,6 +40,7 @@
             <ul class="sub_menu">
                 <li><?php echo anchor('dybdb/search_diagnostics', 'Diagnostic Plots'); ?></li>
                 <li><?php echo anchor('dybdb/search_pqm', 'PQM Plots'); ?></li>
+                <li><?php echo anchor('dybdb/search_sim', 'Simulation Plots'); ?></li>
             </ul>
         </li>
 
@@ -62,7 +63,7 @@
             <ul class="sub_menu">
                 <li><?php echo anchor('dybdb/announcement', 'Announcement'); ?></li>
                 <li><?php echo anchor('dybdb/benchmark', 'Benchmark'); ?></li>
-                <li><?php echo anchor('doc/html', 'Documentation'); ?></li>
+                <li><?php echo anchor('doc/html', 'Developer\'s Manual'); ?></li>
                 <li class="menu_separator"></li>
                 <li><?php echo anchor('dybdb/logout', 'Logout'); ?></li>
             </ul>

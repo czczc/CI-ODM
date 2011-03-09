@@ -66,25 +66,30 @@
    
    
    <?php if (isset($runinfo)): ?>
+      <?php if($currentrun =='sim'): ?>
+        <h1 id='sim_data'>Simulation Data</h1>
+      <?php endif?>
       <?php if ($runinfo->num_rows == 0): ?>
          <?php if (!isset($currentrun)): ?>
              <h3 id="run_not_exists">Run <?php echo $run; ?> is not in the offline database.</h3>        
          <?php endif; ?>
+      <div class = "subject">
+        <h2>General Information Run <span id='runno'><?php echo $runinfo->runNo; ?></span></h2>
+      </div>
       <?php else: ?>
-         <div class = "subject">
+          <div class = "subject" id="general_div">
             <h2>General Information Run <span id='runno'><?php echo $runinfo->runNo; ?></span></h2>
             <table border = "0" cellpadding="0" cellspacing="1", style="width:99%" class="tableborder">
-
                <tbody>
                   <tr>
                       <td><h6>Run Number</h6></td><td class='value'><?php echo $runinfo->runNo; ?></td>
+                      <td><h6>Start Time [Beijing]</h6></td><td class='value'><?php echo date('Y-m-d H:i:s', strtotime($runinfo->timestart)+8*3600);?></td>
                       <td><h6>Start Time [UTC]</h6></td><td class='value' id='run_start_time'><?php echo $runinfo->timestart; ?></td>
-                      <td><h6>Stop Time [UTC]</h6></td><td class='value'><?php echo $runinfo->timeend; ?></td>
                   </tr>  
                   <tr>
                       <td><h6></h6></td><td class='value'></td>
-                      <td><h6>Start Time [Beijing]</h6></td><td class='value'><?php echo date('Y-m-d H:i:s', strtotime($runinfo->timestart)+8*3600);?></td>
                       <td><h6>Stop Time [Beijing]</h6></td><td class='value'><?php echo date('Y-m-d H:i:s', strtotime($runinfo->timeend)+8*3600); ?></td>
+                      <td><h6>Stop Time [UTC]</h6></td><td class='value'><?php echo $runinfo->timeend; ?></td>
                   </tr>             
                   <tr>
                       <td><h6>Run Type</h6></td><td class='value'><?php echo $runinfo->runType; ?></td>
@@ -183,7 +188,7 @@
          </div>
         
          <?php if ($runinfo->runType == 'ADCalib'): ?>
-            <div class = "subject">
+            <div class = "subject" id="calib_div">
                <h2>Calibration Information Run <?php echo $runinfo->runNo?></h2>
                <table border = "0" cellpadding="0" cellspacing="1", style="width:99%" class="tableborder">
                   <tbody>

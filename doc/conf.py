@@ -91,6 +91,7 @@ pygments_style = 'perldoc'
 # A string of reStructuredText that will be included at the beginning of every source file that is read.
 rst_prolog = '''
 .. |CSS| replace:: :abbr:`CSS (Cascading Style Sheets)`
+.. |DOM| replace:: :abbr:`DOM (Document Object Model)`
 .. |Ajax| replace:: :abbr:`Ajax (Asynchronous JavaScript and XML)`
 .. |ODM| replace:: :abbr:`ODM (Offline Data Monitor)`
 

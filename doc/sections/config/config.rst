@@ -79,4 +79,4 @@ To avoid annoying people too much, ODM sets the session expire time to 12 hours:
 .. code-block:: php
 
    <?php
-   $config['sess_expiration']		= 43200;
+   $config['sess_expiration'] = 43200;
