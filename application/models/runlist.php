@@ -136,6 +136,7 @@ class Runlist extends Model
             'dayabay_config/AD#1-finaldryrun.csv',
             'dayabay_config/AD#2-finaldryrun.csv',
             'dayabay_config/AD#3-dry-run-DAQ-run-list.csv',
+            'dayabay_config/AD#4-dry-run-DAQ-run-list.csv',
             'dayabay_config/EH#1-WPminiDryrun.csv',
         );
         $field = array(
