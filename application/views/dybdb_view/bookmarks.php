@@ -7,7 +7,7 @@
 				<ul>
 					<li><a href="http://dayawane.ihep.ac.cn/cgi-bin/DocDB/DocumentDatabase">DocDB</a></li>
 					<li><a href="http://dayabay.ihep.ac.cn/cgi-bin/DocDB/ShowCalendar">Calendar</a></li>
-					<li><a href="http://web.dyb.ihep.ac.cn:8099/">Elog</a></li>
+					<li><a href="http://dayabay.ihep.ac.cn:8099/">Elog</a></li>
 					<li><a href="http://dayabay.ihep.ac.cn/twiki/bin/view/Internal/WebHome">Twiki @IHEP</a></li>
 					<li><a href="https://wiki.bnl.gov/dayabay/index.php?title=Main_Page">Wiki @BNL</a></li>	
 				</ul>
