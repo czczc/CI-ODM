@@ -5,6 +5,30 @@
 <div id="content">
     <div class = "subject">
         <h2>
+            Browser Compatibility
+            <div class="inline_right">03/10/2011</div>
+        </h2>
+        <div class="annoucement">
+            <p>ODM is guaranteed to be compatible with the following browsers:</p>
+            <ul>
+                <li>Firefox 3.0 or above</li>
+                <li>Google Chrome 10.0 or above</li>
+                <li>Safari 4.0 or above</li>
+                <li>IE 8.0 or above</li>
+            </ul>
+            <p>
+            Any older browsers may not display correctly because 
+            the developer is a physicist and he does not have enough money 
+            to buy different workstations and enough time to test all legacy browsers. 
+            To save the developer and yourself, please consider 
+            upgrading to any of the compatible browsers
+            </p> 
+            - CZ
+        </div>
+    </div>
+    
+    <div class = "subject">
+        <h2>
             Development and Code Management
             <div class="inline_right">02/04/2011</div>
         </h2>
