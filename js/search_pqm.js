@@ -99,7 +99,7 @@ function get_runtype() {
 
 
 function fill_figures_name(name) {
-    str_select_figures = ''
+    str_select_figures = '';
     for(var i=0; i<figures.length; i++) {
     	str_select_figures  += ("\n<option value='" 
     	+ figures[i] + "' class='plot_detector'>" 
@@ -173,7 +173,7 @@ $("#submit").click( function() {
             }
         }
         else {
-            run_int = parseInt(run, 10)
+            run_int = parseInt(run, 10);
             if(runs_hash[run_int]) {runlist[run_int] = runs_hash[run_int];}
         }            
     }
@@ -202,16 +202,16 @@ $("#submit").click( function() {
     loaded_run_count = 0;
     is_ajax_finished = false; //ajax call started
     is_ajax_aborted = false;  
-    for (var i=0; i<runlist_keys.length; i++) {
+    for (i=0; i<runlist_keys.length; i++) {
         var run = runlist_keys[i];
 
-        for (var j=0; j<nPlots; j++ ) {
+        for (j=0; j<nPlots; j++ ) {
             query_plot = plots[j];
 
             var figpath = prefix + 'run' + run + '/' + figures_hash[query_plot];
             var link = '';
             if (num_col>1) {
-                link = '<br /><a href="findrun/' + run + '">' + run + "</a>"
+                link = '<br /><a href="findrun/' + run + '">' + run + "</a>";
             }
             var id = run;
             if(nPlots>1) {
@@ -282,8 +282,8 @@ function create_table(runlist, plot, num_col) {
         fig_table.append(str);
         
         fig_table.append("<tbody>\n");
-        for (var i=0; i<runlist.length; i++ ) {
-            var str = "<tr><td>" + '<a href="findrun/' 
+        for (i=0; i<runlist.length; i++ ) {
+            str = "<tr><td>" + '<a href="findrun/' 
             + runlist[i] + '">' + runlist[i] 
             + "</a></td>";
             
@@ -307,7 +307,7 @@ function create_table(runlist, plot, num_col) {
         );
 
         fig_table.append("<tbody>\n");
-        for (var i=0; i<runlist.length; i++ ) {
+        for (i=0; i<runlist.length; i++ ) {
             fig_table.append("<tr>"
             + "<td>" + '<a href="findrun/' + runlist[i] 
             + '">' + runlist[i] + "</a></td>"
@@ -322,7 +322,7 @@ function create_table(runlist, plot, num_col) {
         
         while (nRuns < runlist.length) {
             var str_row = "<tr>";
-            for (var i=0; i<num_col; i++) {
+            for (i=0; i<num_col; i++) {
                 if (nRuns < runlist.length) {
                     str_row += ('<td id="' + runlist[nRuns] + '">'
                     + runlist[nRuns] + '<br />loading ...</td>');
@@ -342,6 +342,7 @@ function create_table(runlist, plot, num_col) {
         height = width * 3 / 4;
     }
     else {}
+    return num_col;
 }
 
 $("#status_bar").dblclick( function() {

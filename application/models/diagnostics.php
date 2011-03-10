@@ -273,7 +273,7 @@ class Diagnostics extends Model
     }
     
     function xml_figureurl($run, $figname, $channelname, $xml_url, $is_sim) {
-        if ($is_sim = 'sim') {
+        if ($is_sim == 'sim') {
             $this->is_sim = TRUE;
         }
         $this->readrun_xml($run, $xml_url);

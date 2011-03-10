@@ -19,7 +19,7 @@
             <p>
             Any older browsers may not display correctly because 
             the developer is a physicist and he does not have enough money 
-            to buy different workstations and enough time to test all legacy browsers. 
+            to buy different workstations or enough time to test all legacy browsers. 
             To save the developer and yourself, please consider 
             upgrading to any of the compatible browsers
             </p> 

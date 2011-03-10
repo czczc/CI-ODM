@@ -103,7 +103,7 @@ function get_runtype() {
 }
 
 function fill_figures_name(name) {
-    str_select_figures = ''
+    str_select_figures = '';
     for(var i=0; i<figures.length; i++) {
     	str_select_figures  += ("\n<option value='" 
     	+ figures[i] + "' class='plot_detector'>" 
@@ -111,8 +111,8 @@ function fill_figures_name(name) {
     }
     $("select[name='" + name + "'] .fig_detectors").append(str_select_figures);
     
-    str_select_figures = ''
-    for(var i=0; i<channel_figures.length; i++) {
+    str_select_figures = '';
+    for(i=0; i<channel_figures.length; i++) {
     	str_select_figures  += ("\n<option value='" 
     	+ channel_figures[i] + "' class='plot_channel'>" 
     	+ channel_figures[i] + "</option>");
@@ -193,7 +193,7 @@ $("#submit").click( function() {
             }
         }
         else {
-            run_int = parseInt(run, 10)
+            run_int = parseInt(run, 10);
             if(runs_hash[run_int]) {runlist[run_int] = runs_hash[run_int];}
         }            
     }
@@ -222,10 +222,10 @@ $("#submit").click( function() {
     loaded_run_count = 0;
     is_ajax_finished = false; //ajax call started
     is_ajax_aborted = false;  
-    for (var i=0; i<runlist_keys.length; i++) {
+    for (i=0; i<runlist_keys.length; i++) {
         var run = runlist_keys[i];        
         var url = runlist[run].replace(/\//g, '-'); // a hack for codeigniter url
-        for (var j=0; j<nPlots; j++ ) {
+        for (j=0; j<nPlots; j++ ) {
             var query_plot = '';
             var query_channel = '';
             if (j<detector_plots.length) {
@@ -239,10 +239,10 @@ $("#submit").click( function() {
 
             var xhr_fig = $.ajax({
                 type: "POST",
-                url: "xml_figureurl/" + run + "/" + query_plot + "/" + query_channel + "/" + url,
+                url: "xml_figureurl/" + run + "/" + query_plot + "/" + query_channel + "/" + url + '/sim',
                 dataType: "xml",
                 success: function(xml) {
-                    thisrun = parseInt( $(xml).find('runnumber').text() );
+                    thisrun = parseInt( $(xml).find('runnumber').text(), 10 );
                     thisfig = $(xml).find('figname').text();
                     loaded_run = thisrun;
                     loaded_run_count++;
@@ -250,7 +250,7 @@ $("#submit").click( function() {
                     var figpath = $(xml).find('path').text(); //prefix already in xml
                     var link = '';
                     if (num_col>1) {
-                        link = '<br /><a href="findrun/' + thisrun + '/sim">' + thisrun + "</a>"
+                        link = '<br /><a href="findrun/' + thisrun + '/sim">' + thisrun + "</a>";
                     }
                     var thisid = thisrun;
                     if(nPlots>1) {
@@ -271,7 +271,7 @@ $("#submit").click( function() {
                 },
                 complete: function() {
                     $('.pblabel').text('Run ' + loaded_run + ' Loaded (Double Click to Abort)');
-                    percent = loaded_run_count*100 / runlist_keys.length / nPlots
+                    percent = loaded_run_count*100 / runlist_keys.length / nPlots;
                     $("#status_bar").progressbar({ value: percent });
                     if (percent == 100 && !is_ajax_aborted) {
                         $('.pblabel').text('All Figures Loaded. Double Click to Clear.');
@@ -330,8 +330,8 @@ function create_table(runlist, plot, num_col) {
         fig_table.append(str);
         
         fig_table.append("<tbody>\n");
-        for (var i=0; i<runlist.length; i++ ) {
-            var str = "<tr><td>" + '<a href="findrun/' 
+        for (i=0; i<runlist.length; i++ ) {
+            str = "<tr><td>" + '<a href="findrun/' 
             + runlist[i] + '/sim">' + runlist[i] 
             + "</a></td>";
             
@@ -354,7 +354,7 @@ function create_table(runlist, plot, num_col) {
         );
 
         fig_table.append("<tbody>\n");
-        for (var i=0; i<runlist.length; i++ ) {
+        for (i=0; i<runlist.length; i++ ) {
             fig_table.append("<tr>"
                 + "<td>" + '<a href="findrun/' + runlist[i] 
                 + '/sim">' + runlist[i] + "</a></td>"
@@ -369,7 +369,7 @@ function create_table(runlist, plot, num_col) {
         
         while (nRuns < runlist.length) {
             var str_row = "<tr>";
-            for (var i=0; i<num_col; i++) {
+            for (i=0; i<num_col; i++) {
                 if (nRuns < runlist.length) {
                     str_row += ('<td id="' + runlist[nRuns] + '">'
                     + runlist[nRuns] + '<br />loading ...</td>');
@@ -389,6 +389,7 @@ function create_table(runlist, plot, num_col) {
         height = width * 3 / 4;
     }
     else {}
+    return num_col;
 }
 
 $("#status_bar").dblclick(function() {

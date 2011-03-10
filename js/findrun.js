@@ -7,7 +7,7 @@ var loading_img = root_url + "styles/images/loading.gif";
 
 var link_loading_img = '<img style="display:inline" src="' 
                      + loading_img
-                     + '" alt="loading" />'
+                     + '" alt="loading" />';
 
 var runNo = $('#runno').html();
 if( !runNo >0 ) {runNo = $('#run_no').html();}
@@ -38,7 +38,7 @@ $("#show_fields input[type=checkbox]").click(function() {
     var is_checked = $(this).attr('checked');
     if (is_checked) { $('.' + val).show(); }
     else { $('.' + val).hide(); }
-})
+});
 
 $("#csv_link").click(function() {
     $('#list_of_runs').table2CSV();
@@ -101,7 +101,8 @@ function load_daq() {
 
             var FEE_prefix = data[active_detector]['FEE_prefix'];          
             var boards = ['5','6','7','8','9','10','11','12','13','14','15','16','17'];
-            for (var i=0; i<boards.length; i++) {
+            var i = 0;
+            for (i=0; i<boards.length; i++) {
                 var id = '#_' + boards[i] + '_DACUniformVal';
                 $(id).html(data[ FEE_prefix + boards[i] ]['DACUniformVal']);
 
@@ -117,7 +118,7 @@ function load_diagnostics() {
     //.getJSON use get method, which is not good for codeIgniter
     // console.log(is_sim_data);
     var url = base_url + 'diagnostics_json_figurelist/' + runNo;
-    if (is_sim_data) { url = url + '/sim'}
+    if (is_sim_data) { url = url + '/sim'; }
     $.post(
         url, '',
         function(data) {
@@ -125,17 +126,19 @@ function load_diagnostics() {
             $("#diagnostics_rootfile").click( function() {
                window.location =  diagnostics_rootPath;
             });
-            for (var detector in data['detectors']) {
+            var detector;
+            for (detector in data['detectors']) {
                 diagnostics_detector_list.push(detector);
             }                
             diagnostics_detector_list.sort();
             diagnostics_figure_list = data['detectors'];
             if (diagnostics_detector_list.length>0) { 
                 // enable live detectors
-                for (var i=0; i<diagnostics_detector_list.length; i++) {
+                var i=0;
+                for (i=0; i<diagnostics_detector_list.length; i++) {
                     var site_detector = parse_detname(diagnostics_detector_list[i]);
                     var site = site_detector[0];
-                    var detector = site_detector[1];    
+                    detector = site_detector[1];    
                     var det_cell = $("#diagnostics_site_det tr." + site + " td." + detector + " a" );
                     det_cell.removeClass("det").addClass("live_det").attr("href", "#");
                 }
@@ -169,7 +172,8 @@ function build_diagnostics(detname) {
     table_diagnostics_plots.empty();
     var column_index = 0;
     var html = '';
-    for (var i=0; i<figure_list.length; i++) {
+    var i=0;
+    for (i=0; i<figure_list.length; i++) {
         if (column_index == 0) {html += '<tr>';}
         html += '<td><img class="img_db" style="margin-bottom:5px" src="' 
              + str_force_reload(figure_list[i]['path'], timestamp)
@@ -188,7 +192,7 @@ function build_diagnostics(detname) {
             + $(this).attr("src")
             + '" /></div>',
             {
-                'overlayClose' : true,
+                'overlayClose' : true
             }
         );
         
@@ -204,17 +208,19 @@ function load_pqm() {
     $.post(
         url, '',
         function(data) {
-            for (var detector in data) {
+            var detector;
+            for (detector in data) {
                 pqm_detector_list.push(detector);
             }
             pqm_detector_list.sort();
             pqm_figure_list = data;
             if (pqm_detector_list.length>0) { 
                 // enable live detectors
-                for (var i=0; i<pqm_detector_list.length; i++) {
+                var i=0;
+                for (i=0; i<pqm_detector_list.length; i++) {
                     var site_detector = parse_detname(pqm_detector_list[i]);
                     var site = site_detector[0];
-                    var detector = site_detector[1];    
+                    detector = site_detector[1];    
                     var det_cell = $("#pqm_site_det tr." + site + " td." + detector + " a" );
                     det_cell.removeClass("det").addClass("live_det").attr("href", "#");
                 }
@@ -247,7 +253,8 @@ function build_pqm(detname) {
     table_pqm_plots.empty();
     var column_index = 0;
     var html = '';
-    for (var i=0; i<figure_list.length; i++) {
+    var i=0;
+    for (i=0; i<figure_list.length; i++) {
         if (column_index == 0) {html += '<tr>';}
         html += '<td><img class="img_db" style="margin-bottom:5px" src="' 
              + str_force_reload(figure_list[i]['path'], timestamp)
@@ -266,7 +273,7 @@ function build_pqm(detname) {
             + $(this).attr("src")
             + '" /></div>',
             {
-                'overlayClose' : true,
+                'overlayClose' : true
             }
         );
         return false;
@@ -279,7 +286,8 @@ function parse_detname(detname) {
     var site = "";
     var detector = "";
     var found = true;
-    for (var i=0; i<sites.length; i++) {
+    var i=0;
+    for (i=0; i<sites.length; i++) {
         site = sites[i];
         detector = detname.replace(site, "");
         if (detector.length < detname.length) {
@@ -297,7 +305,7 @@ function parse_detname(detname) {
 
 function build_pmtmap(detname) {
     var sim_data_link = '';
-    if (is_sim_data) { sim_data_link = '/sim'};
+    if (is_sim_data) { sim_data_link = '/sim'; }
     var site_detector = parse_detname(detname);
     var site = site_detector[0];
     var detector = site_detector[1];
@@ -306,16 +314,18 @@ function build_pmtmap(detname) {
     feemap_table.empty();
     var html = '';
     html += "<tr><td>connector</td>";
-    for (var i=1; i<=16; i++) {
+    var i;
+    for (i=1; i<=16; i++) {
         html += "<td>" + sprintf("%02d", i) + "</td>";
     }
     html += "</tr>";    
-    for (var board=5; board<=17; board++) {
+    var board, connector;
+    for (board=5; board<=17; board++) {
         str_board = sprintf("%02d", board);
         html += "<tr board="
               + '"' + str_board + '"'
               + "><td>board " + str_board + "</td>";
-        for (var connector=1; connector<=16; connector++) {
+        for (connector=1; connector<=16; connector++) {
             str_connector = sprintf("%02d", connector);
             html += '<td connector="' + str_connector + '">';
             link = '<a href="' + base_url + 'channel/' + runNo + '/' + detname + '/' + str_board + '/' + str_connector + sim_data_link + '">O</a>';
@@ -328,18 +338,19 @@ function build_pmtmap(detname) {
     
     var pmtmap_table = $("#pmtmap_table");
     pmtmap_table.empty();
+    var ring, column;
     if (detector.indexOf('AD') != -1) {
         html = "<tr><td>column</td>";
-        for (var i=1; i<=24; i++) {
+        for (i=1; i<=24; i++) {
             html += "<td>" + sprintf("%02d", i) + "</td>";
         }
         html += "</tr>";    
-        for (var ring=8; ring>=0; ring--) {
+        for (ring=8; ring>=0; ring--) {
             str_ring = sprintf("%02d", ring);
             html += "<tr ring="
                   + '"' + str_ring + '"'
                   + "><td>ring " + str_ring + "</td>";
-            for (var column=1; column<=24; column++) {
+            for (column=1; column<=24; column++) {
                 str_column = sprintf("%02d", column);
                 html += '<td column="' + str_column + '">';
                 html += "</td>";
@@ -350,15 +361,15 @@ function build_pmtmap(detname) {
     }
     else if (detector.indexOf('WS') != -1) {
         html = "<tr><td>spot</td>";
-        for (var i=1; i<=29; i++) {
+        for (i=1; i<=29; i++) {
             html += "<td>" + sprintf("%02d", i) + "</td>";
         }
-        for (var ring=1; ring<=9; ring++) {
+        for (ring=1; ring<=9; ring++) {
             str_ring = sprintf("%02d", ring);
             html += "<tr ring="
                   + '"' + str_ring + '"'
                   + "><td>" + str_ring + "</td>";
-            for (var column=1; column<=29; column++) {
+            for (column=1; column<=29; column++) {
                 str_column = sprintf("%02d", column);
                 html += '<td column="' + str_column + '">';
                 html += "</td>";
@@ -377,7 +388,7 @@ function build_pmtmap(detname) {
 var channel_info = {};
 function load_channels(runno, detname) {
     var url = base_url + 'json_channels/' + runNo + '/' + detname;
-    if (is_sim_data) { url = url + '/sim'}
+    if (is_sim_data) { url = url + '/sim'; }
     $.post(url, 
         function(data) {
             channel_info = data;
@@ -534,10 +545,10 @@ $("#chk_autoreload").click(function() {
         currentrun_update.html('');
         clearTimeout(timeinterval_id);  
     }
-})
+});
 
 if (window.location.href.indexOf('currentrun') > 0) {
-    var currentrun_update = $('.currentrun_update');
+    currentrun_update = $('.currentrun_update');
     currentrun_update.html('last update: ' + nowToBeijingTime());
     setInterval(function() {
         build_diagnostics(diagnostics_detector_list[0]); 

@@ -7,15 +7,15 @@ var Temp_DataSet = {
     "Temp_PT2" : {label: "2: AD Middle", color: 6, data: []},
     "Temp_PT3" : {label: "3: AD Middle", color: 4, data: []},
     "Temp_PT4" : {label: "4: AD Top", color: 5, data: []},
-    "Temp_PT5" : {label: "5: Clean Room", color: 3, data: []},
-}
+    "Temp_PT5" : {label: "5: Clean Room", color: 3, data: []}
+};
 var Temp_Display = {
     "Temp_All" :  []
-}
+};
 var temperature_options = {};
 
 var empty_data = [ { label: "loading ...", data: [] } ];
-var empty_options = [ {} ]
+var empty_options = [ {} ];
 
 $('.holder').each(function() {
     $.plot($(this), empty_data, empty_options);
@@ -40,7 +40,7 @@ function post_temperature_data(options) {
             for (var key_time in data) { 
                 $.each(Temp_DataSet, function(key, val) {
                    val.data.push([key_time * 1000, data[key_time][key]]);
-                })
+                });
             }      
                        
             //repopulate global variables
@@ -72,7 +72,7 @@ function submit_temperature() {
         'date_from': $("#date_from").val(),
         'date_to': $("#date_to").val(),
         'points' : $("#points").val()
-    }
+    };
     post_temperature_data(options);
 }
 
