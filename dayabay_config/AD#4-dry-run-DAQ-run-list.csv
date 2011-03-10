@@ -83,3 +83,4 @@ RunNumber,DataCategory,Date,TriggerNumbers,TriggerRates/Hz,RunType,TriggerType,L
 7276,trigger mode test,2011-March-9,,500,Physics,crossIn,~,~,~,~,~,750,5,2.00E+07,500,Middle MO LED,-4.71,~,~,~,~,~,,
 7277,trigger mode test,2011-March-9,,3450,Physics,Esum+Nhit+Period+crossIn,30,40,~,~,2000,750,5,2.00E+07,500,Middle MO LED,-4.71,~,~,~,~,~,,
 7278,stability run,2011-March-9,8hours,3450,Physics,Esum+Nhit+Period+crossIn,30,40,~,~,2000,750,5,2.00E+07,500,Middle MO LED,-4.71,~,~,~,~,~,"trigger rate is outside of DAQ limit, some data might be lost",
+7279,stability run,2011-March-10,9hours,1600/1200,Physics,Esum+Nhit+Period+croosIn,40,40,~,~,100,750,5,2.00E+07,500/100,Middle MO LED,-4.72-4.65,~,~,~,~,~,"stability run: start ~9:00am, LED Freq. reduced from 500Hz to 100Hz @2:00pm, and LED pulse driving voltage reduced from -4.72 to -4.65V @5pm",
