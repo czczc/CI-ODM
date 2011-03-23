@@ -125,7 +125,7 @@ class Daqinfo extends Model
     }
     
     function _ConstructDaqTable() {
-        $detectorArray = array("SAB-AD1", "SAB-AD2", "SAB-AD3", "SAB-AD4", "EH1-WPI", "EH1-WPO");
+        $detectorArray = array("SAB-AD1", "SAB-AD2", "SAB-AD3", "SAB-AD4", "EH1-WPI", "EH1-WPO", "EH1-RPC");
         foreach ($detectorArray as $detector_name) {
             $this->Detector_table[$detector_name] = array();
         }

@@ -93,8 +93,14 @@ function load_daq() {
             var active_detector = data['active'];
             var LTB_triggerSource = $('#LTB_triggerSource');
             if (LTB_triggerSource.html() == 'loading ...') {LTB_triggerSource.html(data['LTB-'+active_detector]['LTB_triggerSource']);}
-            $('#HSUM_trigger_threshold').html(data['LTB-' + active_detector]['HSUM_trigger_threshold']);
-            $('#DAC_total_value').html(data['LTB-' + active_detector]['DAC_total_value']);
+            if (data['LTB-' + active_detector]['DAC_total_value']) {
+                $('#DAC_total_value').html(data['LTB-' + active_detector]['DAC_total_value']); 
+                $('#HSUM_trigger_threshold').html(data['LTB-' + active_detector]['HSUM_trigger_threshold']);
+            }
+            else {
+                $('#DAC_total_value').html('N/A');
+                $('#HSUM_trigger_threshold').html('N/A');
+            }
             $('#FEEBoardVersion').html(data[active_detector]['FEEBoardVersion']);
             $('#FEECPLDVersion').html(data[active_detector]['FEECPLDVersion']);
             $('#LTBfirmwareVersion').html(data[active_detector]['LTBfirmwareVersion']);
@@ -102,12 +108,20 @@ function load_daq() {
             var FEE_prefix = data[active_detector]['FEE_prefix'];          
             var boards = ['5','6','7','8','9','10','11','12','13','14','15','16','17'];
             var i = 0;
+            var id = '';
             for (i=0; i<boards.length; i++) {
-                var id = '#_' + boards[i] + '_DACUniformVal';
-                $(id).html(data[ FEE_prefix + boards[i] ]['DACUniformVal']);
-
-                id = '#_' + boards[i] + '_MaxHitPerTrigger';
-                $(id).html(data[ FEE_prefix + boards[i] ]['MaxHitPerTrigger']);
+                if (data[ FEE_prefix + boards[i] ]) {
+                    id = '#_' + boards[i] + '_DACUniformVal';
+                    $(id).html(data[ FEE_prefix + boards[i] ]['DACUniformVal']);
+                    id = '#_' + boards[i] + '_MaxHitPerTrigger';
+                    $(id).html(data[ FEE_prefix + boards[i] ]['MaxHitPerTrigger']);
+                }
+                else {
+                    id = '#_' + boards[i] + '_DACUniformVal';
+                    $(id).html('N/A');
+                    id = '#_' + boards[i] + '_MaxHitPerTrigger';
+                    $(id).html('N/A');
+                }
             }
             $('#daq_table td.loading').removeClass('loading').addClass('value');   
         }, "json"
