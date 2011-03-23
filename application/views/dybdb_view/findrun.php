@@ -56,7 +56,7 @@
                         . " . " . $runlist->csv_list[$row['runNo']]['Comments']; 
                      ?>
                      </td>
-                     <td class='Elog'><?php echo '<a href="http://dayabay.ihep.ac.cn:8099/Commissioning/?mode=full&reverse=0&reverse=1&npp=20&subtext=' . $row['runNo'] . '">Elog</a>'; ?></td>
+                     <td class='Elog'><?php echo '<a href="http://web.dyb.ihep.ac.cn:8099/Commissioning/?mode=full&reverse=0&reverse=1&npp=20&subtext=' . $row['runNo'] . '">Elog</a>'; ?></td>
                   </tr>
                <?php endforeach; ?>
             </tbody>
@@ -134,7 +134,7 @@
                     <tr>
                         <td><h6>Elog Search</h6></td>
                         <td class='value'>
-                        <?php echo '<a href="http://dayabay.ihep.ac.cn:8099/Commissioning/?mode=full&reverse=0&reverse=1&npp=20&subtext=' . $runinfo->runNo . '">Elog</a>'; ?>
+                        <?php echo '<a href="http://web.dyb.ihep.ac.cn:8099/Commissioning/?mode=full&reverse=0&reverse=1&npp=20&subtext=' . $runinfo->runNo . '">Elog</a>'; ?>
                         </td>
                     </tr>
                 </tbody>
