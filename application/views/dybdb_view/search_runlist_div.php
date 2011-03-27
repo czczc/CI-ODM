@@ -60,6 +60,7 @@
            <table  border = "0" cellpadding="0" cellspacing="1", style="width:99%">
                <tr>
                    <td><input type="checkbox" name="RunType" value="RunType" checked>Run Type</td>
+                   <td><input type="checkbox" name="SiteDet" value="SiteDet" checked>Site-Detector</td>
                    <td><input type="checkbox" name="StartTime" value="StartTime">Start Time [UTC]</td>
                    <td><input type="checkbox" name="StartTime" value="StartTime" checked>Start Time [Beijing]</td>
                    <td><input type="checkbox" name="RunLength" value="RunLength" checked>Run Length</td>
@@ -71,6 +72,7 @@
                    <td><input type="checkbox" name="DiagnosticPlots" value="DiagnosticPlots" checked>Diagnostic Plots</td>
                    <td><input type="checkbox" name="Comments" value="Comments" checked>Comments</td>
                    <td><input type="checkbox" name="Elog" value="Elog" checked>Elog</td>
+                   <td></td>
                </tr>
            </table>
        </fieldset>

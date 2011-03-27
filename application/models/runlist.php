@@ -3,7 +3,7 @@
 class Runlist extends Model
 {
     var $query_str         = '';
-    var $query_select      = 'SELECT DaqRunInfo.runNo, DaqRunInfo.runType, DaqRunInfoVld.TIMESTART, DaqRunInfoVld.TIMEEND ';
+    var $query_select      = 'SELECT DaqRunInfo.runNo, DaqRunInfo.runType, DaqRunInfo.partitionName, DaqRunInfoVld.TIMESTART, DaqRunInfoVld.TIMEEND ';
     var $query_from        = ' FROM DaqRunInfo INNER JOIN DaqRunInfoVld ON DaqRunInfo.SEQNO=DaqRunInfoVld.SEQNO WHERE 1=1 ';
     var $query_runtype     = "";
     var $query_runrange    = "";

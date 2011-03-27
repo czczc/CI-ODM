@@ -3,7 +3,6 @@
 <?php include 'breadcrumb.php'; ?>
 
 <div id="content">
-    
    <?php if (isset($runlist)): ?>
       <div class = "subject">
          <h2>
@@ -19,6 +18,7 @@
             <thead><tr>
                <th>Run No</th>
                <th class='RunType'>Run Type</th>
+               <th class='SiteDet'>Site-Detector</th>
                <th class='StartTime hidden'>Start Time<br /> [UTC]</th>
                <th class='StartTimeBeijing'>Start Time<br /> [Beijing]</th>
                <th class='RunLength'>Run Length [h]</th>
@@ -34,6 +34,7 @@
                   <tr>
                      <td><?php echo anchor('dybdb/findrun/' . $row['runNo'], $row['runNo']); ?></td>
                      <td class='RunType'><?php echo $row['runType']; ?></td>
+                     <td class='SiteDet'><?php echo strtoupper(substr($row['partitionName'],5)); ?></td>
                      <td class='StartTime hidden'><?php echo $row['TIMESTART']; ?></td>
                      <td class='StartTimeBeijing'>
                      <?php 
