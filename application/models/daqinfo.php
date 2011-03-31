@@ -125,7 +125,7 @@ class Daqinfo extends Model
     }
     
     function _ConstructDaqTable() {
-        $detectorArray = array("SAB-AD1", "SAB-AD2", "SAB-AD3", "SAB-AD4", "EH1-WPI", "EH1-WPO", "EH1-RPC");
+        $detectorArray = array("SAB-AD1", "SAB-AD2", "SAB-AD3", "SAB-AD4", "EH1-WPI", "EH1-WPO", "EH1-RPC", "EH1-AD1", "EH1-AD2");
         foreach ($detectorArray as $detector_name) {
             $this->Detector_table[$detector_name] = array();
         }
@@ -135,6 +135,8 @@ class Daqinfo extends Model
         $this->Detector_table["SAB-AD4"]["FEE_prefix"] = "100_";
         $this->Detector_table["EH1-WPI"]["FEE_prefix"] = "1_5_";
         $this->Detector_table["EH1-WPO"]["FEE_prefix"] = "1_6_";
+        $this->Detector_table["EH1-AD1"]["FEE_prefix"] = "1_1_";
+        $this->Detector_table["EH1-AD2"]["FEE_prefix"] = "1_2_";
         
         $this->Detector_table["SAB-AD1"]["LTB_prefix"] = "";
         $this->Detector_table["SAB-AD2"]["LTB_prefix"] = "LTB_98_";
@@ -142,6 +144,8 @@ class Daqinfo extends Model
         $this->Detector_table["SAB-AD4"]["LTB_prefix"] = "LTB_100_";
         $this->Detector_table["EH1-WPI"]["LTB_prefix"] = "LTB_1_5_";
         $this->Detector_table["EH1-WPO"]["LTB_prefix"] = "LTB_1_6_";
+        $this->Detector_table["EH1-AD1"]["LTB_prefix"] = "LTB_1_1_";
+        $this->Detector_table["EH1-AD2"]["LTB_prefix"] = "LTB_1_2_";
         
         foreach ($detectorArray as $detector_name) {
             $LTB_name = 'LTB-' . $detector_name;
